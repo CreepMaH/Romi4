@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ReportBigPlanConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ReportBigPlanConnectionString (Settings)" PropertyReference="ApplicationSettings.Romi4.Properties.Settings.GlobalReference.Default.ReportBigPlanConnectionString" Provider="System.Data.OleDb" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ReportBigPlanConnectionStringDir" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ReportBigPlanConnectionStringDir (Settings)" PropertyReference="ApplicationSettings.Romi4.Properties.Settings.GlobalReference.Default.ReportBigPlanConnectionStringDir" Provider="System.Data.OleDb" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="table1TableAdapter" GeneratorDataComponentClassName="table1TableAdapter" Name="table1" UserDataComponentName="table1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ReportBigPlanConnectionString (Settings)" DbObjectName="table1" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ReportBigPlanConnectionStringDir (Settings)" DbObjectName="table1" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `table1` WHERE ((`num` = ?) AND ((? = 1 AND `currentDate` IS NULL) OR (`currentDate` = ?)) AND ((? = 1 AND `paymentSqM` IS NULL) OR (`paymentSqM` = ?)) AND ((? = 1 AND `paymentRegPays` IS NULL) OR (`paymentRegPays` = ?)) AND ((? = 1 AND `accumSquare` IS NULL) OR (`accumSquare` = ?)) AND ((? = 1 AND `restSquare` IS NULL) OR (`restSquare` = ?)) AND ((? = 1 AND `rating` IS NULL) OR (`rating` = ?)) AND ((? = 1 AND `indRent` IS NULL) OR (`indRent` = ?)) AND ((? = 1 AND `usingPayment` IS NULL) OR (`usingPayment` = ?)) AND ((? = 1 AND `monthlySummarySqM` IS NULL) OR (`monthlySummarySqM` = ?)) AND ((? = 1 AND `monthlySummaryRegPays` IS NULL) OR (`monthlySummaryRegPays` = ?)))</CommandText>
@@ -57,7 +57,7 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT num, currentDate, paymentSqM, paymentRegPays, accumSquare, restSquare, rating, indRent, usingPayment, monthlySummarySqM, monthlySummaryRegPays FROM table1</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -115,6 +115,193 @@
               <Mapping SourceColumn="usingPayment" DataSetColumn="usingPayment" />
               <Mapping SourceColumn="monthlySummarySqM" DataSetColumn="monthlySummarySqM" />
               <Mapping SourceColumn="monthlySummaryRegPays" DataSetColumn="monthlySummaryRegPays" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tableDescribeTableAdapter" GeneratorDataComponentClassName="tableDescribeTableAdapter" Name="tableDescribe" UserDataComponentName="tableDescribeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ReportBigPlanConnectionStringDir (Settings)" DbObjectName="tableDescribe" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `tableDescribe` WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTime` IS NULL) OR (`incomeTime` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_city" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_city" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_street" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_roomsNum" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_roomsNum" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_squareRange" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_squareRange" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_buildingDescribe" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_buildingDescribe" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_square" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_square" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_price" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_fullTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_fullTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_accumTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_accumTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_buyoutTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_buyoutTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_incomeTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_incomeTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `tableDescribe` (`type`, `city`, `street`, `roomsNum`, `squareRange`, `buildingDescribe`, `square`, `price`, `fullTime`, `accumTime`, `buyoutTime`, `incomeTime`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="city" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="roomsNum" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="squareRange" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="buildingDescribe" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="square" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="price" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="fullTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="accumTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="buyoutTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="incomeTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT type, city, street, roomsNum, squareRange, buildingDescribe, square, price, fullTime, accumTime, buyoutTime, incomeTime FROM tableDescribe</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `tableDescribe` SET `type` = ?, `city` = ?, `street` = ?, `roomsNum` = ?, `squareRange` = ?, `buildingDescribe` = ?, `square` = ?, `price` = ?, `fullTime` = ?, `accumTime` = ?, `buyoutTime` = ?, `incomeTime` = ? WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTime` IS NULL) OR (`incomeTime` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="city" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="roomsNum" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="squareRange" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="buildingDescribe" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="square" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="price" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="fullTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="accumTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="buyoutTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="incomeTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_type" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="type" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_city" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_city" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="city" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_street" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_street" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="street" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_roomsNum" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_roomsNum" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="roomsNum" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_squareRange" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_squareRange" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="squareRange" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_buildingDescribe" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_buildingDescribe" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buildingDescribe" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_square" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_square" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="square" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_price" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_price" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="price" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_fullTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_fullTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="fullTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_accumTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_accumTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="accumTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_buyoutTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_buyoutTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="buyoutTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_incomeTime" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_incomeTime" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="incomeTime" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="type" DataSetColumn="type" />
+              <Mapping SourceColumn="city" DataSetColumn="city" />
+              <Mapping SourceColumn="street" DataSetColumn="street" />
+              <Mapping SourceColumn="roomsNum" DataSetColumn="roomsNum" />
+              <Mapping SourceColumn="squareRange" DataSetColumn="squareRange" />
+              <Mapping SourceColumn="buildingDescribe" DataSetColumn="buildingDescribe" />
+              <Mapping SourceColumn="square" DataSetColumn="square" />
+              <Mapping SourceColumn="price" DataSetColumn="price" />
+              <Mapping SourceColumn="fullTime" DataSetColumn="fullTime" />
+              <Mapping SourceColumn="accumTime" DataSetColumn="accumTime" />
+              <Mapping SourceColumn="buyoutTime" DataSetColumn="buyoutTime" />
+              <Mapping SourceColumn="incomeTime" DataSetColumn="incomeTime" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tableSmallPlanTableAdapter" GeneratorDataComponentClassName="tableSmallPlanTableAdapter" Name="tableSmallPlan" UserDataComponentName="tableSmallPlanTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ReportBigPlanConnectionStringDir (Settings)" DbObjectName="tableSmallPlan" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `tableSmallPlan` WHERE ((`num` = ?) AND ((? = 1 AND `paramName` IS NULL) OR (`paramName` = ?)) AND ((? = 1 AND `rubles` IS NULL) OR (`rubles` = ?)) AND ((? = 1 AND `sqM` IS NULL) OR (`sqM` = ?)) AND ((? = 1 AND `regPays` IS NULL) OR (`regPays` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_num" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="num" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_paramName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_paramName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_rubles" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_rubles" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sqM" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_sqM" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_regPays" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_regPays" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `tableSmallPlan` (`num`, `paramName`, `rubles`, `sqM`, `regPays`) VALUES (?, ?, ?, ?, ?)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="num" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="num" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="paramName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="rubles" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="sqM" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="regPays" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT num, paramName, rubles, sqM, regPays FROM tableSmallPlan</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `tableSmallPlan` SET `num` = ?, `paramName` = ?, `rubles` = ?, `sqM` = ?, `regPays` = ? WHERE ((`num` = ?) AND ((? = 1 AND `paramName` IS NULL) OR (`paramName` = ?)) AND ((? = 1 AND `rubles` IS NULL) OR (`rubles` = ?)) AND ((? = 1 AND `sqM` IS NULL) OR (`sqM` = ?)) AND ((? = 1 AND `regPays` IS NULL) OR (`regPays` = ?)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="num" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="num" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="paramName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="rubles" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="sqM" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="regPays" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_num" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="num" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_paramName" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_paramName" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="paramName" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_rubles" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_rubles" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="rubles" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_sqM" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_sqM" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="sqM" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="IsNull_regPays" Precision="0" ProviderType="Integer" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="Original_regPays" Precision="0" ProviderType="VarWChar" Scale="0" Size="0" SourceColumn="regPays" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="num" DataSetColumn="num" />
+              <Mapping SourceColumn="paramName" DataSetColumn="paramName" />
+              <Mapping SourceColumn="rubles" DataSetColumn="rubles" />
+              <Mapping SourceColumn="sqM" DataSetColumn="sqM" />
+              <Mapping SourceColumn="regPays" DataSetColumn="regPays" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -209,11 +396,126 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="tableDescribe" msprop:Generator_TableClassName="tableDescribeDataTable" msprop:Generator_TableVarName="tabletableDescribe" msprop:Generator_TablePropName="tableDescribe" msprop:Generator_RowDeletingName="tableDescribeRowDeleting" msprop:Generator_RowChangingName="tableDescribeRowChanging" msprop:Generator_RowEvHandlerName="tableDescribeRowChangeEventHandler" msprop:Generator_RowDeletedName="tableDescribeRowDeleted" msprop:Generator_UserTableName="tableDescribe" msprop:Generator_RowChangedName="tableDescribeRowChanged" msprop:Generator_RowEvArgName="tableDescribeRowChangeEvent" msprop:Generator_RowClassName="tableDescribeRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="type" msprop:Generator_ColumnVarNameInTable="columntype" msprop:Generator_ColumnPropNameInRow="type" msprop:Generator_ColumnPropNameInTable="typeColumn" msprop:Generator_UserColumnName="type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="city" msprop:Generator_ColumnVarNameInTable="columncity" msprop:Generator_ColumnPropNameInRow="city" msprop:Generator_ColumnPropNameInTable="cityColumn" msprop:Generator_UserColumnName="city" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="street" msprop:Generator_ColumnVarNameInTable="columnstreet" msprop:Generator_ColumnPropNameInRow="street" msprop:Generator_ColumnPropNameInTable="streetColumn" msprop:Generator_UserColumnName="street" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="roomsNum" msprop:Generator_ColumnVarNameInTable="columnroomsNum" msprop:Generator_ColumnPropNameInRow="roomsNum" msprop:Generator_ColumnPropNameInTable="roomsNumColumn" msprop:Generator_UserColumnName="roomsNum" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="squareRange" msprop:Generator_ColumnVarNameInTable="columnsquareRange" msprop:Generator_ColumnPropNameInRow="squareRange" msprop:Generator_ColumnPropNameInTable="squareRangeColumn" msprop:Generator_UserColumnName="squareRange" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="buildingDescribe" msprop:Generator_ColumnVarNameInTable="columnbuildingDescribe" msprop:Generator_ColumnPropNameInRow="buildingDescribe" msprop:Generator_ColumnPropNameInTable="buildingDescribeColumn" msprop:Generator_UserColumnName="buildingDescribe" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="square" msprop:Generator_ColumnVarNameInTable="columnsquare" msprop:Generator_ColumnPropNameInRow="square" msprop:Generator_ColumnPropNameInTable="squareColumn" msprop:Generator_UserColumnName="square" type="xs:double" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:double" minOccurs="0" />
+              <xs:element name="fullTime" msprop:Generator_ColumnVarNameInTable="columnfullTime" msprop:Generator_ColumnPropNameInRow="fullTime" msprop:Generator_ColumnPropNameInTable="fullTimeColumn" msprop:Generator_UserColumnName="fullTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="accumTime" msprop:Generator_ColumnVarNameInTable="columnaccumTime" msprop:Generator_ColumnPropNameInRow="accumTime" msprop:Generator_ColumnPropNameInTable="accumTimeColumn" msprop:Generator_UserColumnName="accumTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="buyoutTime" msprop:Generator_ColumnVarNameInTable="columnbuyoutTime" msprop:Generator_ColumnPropNameInRow="buyoutTime" msprop:Generator_ColumnPropNameInTable="buyoutTimeColumn" msprop:Generator_UserColumnName="buyoutTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="incomeTime" msprop:Generator_ColumnVarNameInTable="columnincomeTime" msprop:Generator_ColumnPropNameInRow="incomeTime" msprop:Generator_ColumnPropNameInTable="incomeTimeColumn" msprop:Generator_UserColumnName="incomeTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="tableSmallPlan" msprop:Generator_TableClassName="tableSmallPlanDataTable" msprop:Generator_TableVarName="tabletableSmallPlan" msprop:Generator_TablePropName="tableSmallPlan" msprop:Generator_RowDeletingName="tableSmallPlanRowDeleting" msprop:Generator_RowChangingName="tableSmallPlanRowChanging" msprop:Generator_RowEvHandlerName="tableSmallPlanRowChangeEventHandler" msprop:Generator_RowDeletedName="tableSmallPlanRowDeleted" msprop:Generator_UserTableName="tableSmallPlan" msprop:Generator_RowChangedName="tableSmallPlanRowChanged" msprop:Generator_RowEvArgName="tableSmallPlanRowChangeEvent" msprop:Generator_RowClassName="tableSmallPlanRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="num" msprop:Generator_ColumnVarNameInTable="columnnum" msprop:Generator_ColumnPropNameInRow="num" msprop:Generator_ColumnPropNameInTable="numColumn" msprop:Generator_UserColumnName="num">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="paramName" msprop:Generator_ColumnVarNameInTable="columnparamName" msprop:Generator_ColumnPropNameInRow="paramName" msprop:Generator_ColumnPropNameInTable="paramNameColumn" msprop:Generator_UserColumnName="paramName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rubles" msprop:Generator_ColumnVarNameInTable="columnrubles" msprop:Generator_ColumnPropNameInRow="rubles" msprop:Generator_ColumnPropNameInTable="rublesColumn" msprop:Generator_UserColumnName="rubles" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sqM" msprop:Generator_ColumnVarNameInTable="columnsqM" msprop:Generator_ColumnPropNameInRow="sqM" msprop:Generator_ColumnPropNameInTable="sqMColumn" msprop:Generator_UserColumnName="sqM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="regPays" msprop:Generator_ColumnVarNameInTable="columnregPays" msprop:Generator_ColumnPropNameInRow="regPays" msprop:Generator_ColumnPropNameInTable="regPaysColumn" msprop:Generator_UserColumnName="regPays" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:table1" />
-      <xs:field xpath="mstns:num" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

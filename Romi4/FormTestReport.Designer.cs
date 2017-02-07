@@ -30,39 +30,71 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReportBigPlanDataSet = new Romi4.ReportBigPlanDataSet();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource3 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.ReportBigPlanDataSet = new Romi4.ReportBigPlanDataSet();
+            this.table1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.table1TableAdapter = new Romi4.ReportBigPlanDataSetTableAdapters.table1TableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
+            this.tableDescribeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableDescribeTableAdapter = new Romi4.ReportBigPlanDataSetTableAdapters.tableDescribeTableAdapter();
+            this.tableSmallPlanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tableSmallPlanTableAdapter = new Romi4.ReportBigPlanDataSetTableAdapters.tableSmallPlanTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.ReportBigPlanDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableDescribeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableSmallPlanBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // table1BindingSource
+            // reportViewer1
             // 
-            this.table1BindingSource.DataMember = "table1";
-            this.table1BindingSource.DataSource = this.ReportBigPlanDataSet;
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "DataSetTable1";
+            reportDataSource1.Value = this.table1BindingSource;
+            reportDataSource2.Name = "DataSetTableDescribe";
+            reportDataSource2.Value = this.tableDescribeBindingSource;
+            reportDataSource3.Name = "DataSetTableSmallPlan";
+            reportDataSource3.Value = this.tableSmallPlanBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource3);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Romi4.ReportFinal.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(833, 339);
+            this.reportViewer1.TabIndex = 0;
             // 
             // ReportBigPlanDataSet
             // 
             this.ReportBigPlanDataSet.DataSetName = "ReportBigPlanDataSet";
             this.ReportBigPlanDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // reportViewer1
+            // table1BindingSource
             // 
-            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.table1BindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "Romi4.Report3.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(833, 339);
-            this.reportViewer1.TabIndex = 0;
+            this.table1BindingSource.DataMember = "table1";
+            this.table1BindingSource.DataSource = this.ReportBigPlanDataSet;
             // 
             // table1TableAdapter
             // 
             this.table1TableAdapter.ClearBeforeFill = true;
+            // 
+            // tableDescribeBindingSource
+            // 
+            this.tableDescribeBindingSource.DataMember = "tableDescribe";
+            this.tableDescribeBindingSource.DataSource = this.ReportBigPlanDataSet;
+            // 
+            // tableDescribeTableAdapter
+            // 
+            this.tableDescribeTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableSmallPlanBindingSource
+            // 
+            this.tableSmallPlanBindingSource.DataMember = "tableSmallPlan";
+            this.tableSmallPlanBindingSource.DataSource = this.ReportBigPlanDataSet;
+            // 
+            // tableSmallPlanTableAdapter
+            // 
+            this.tableSmallPlanTableAdapter.ClearBeforeFill = true;
             // 
             // FormTestReport
             // 
@@ -76,8 +108,10 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormTestReport_FormClosed);
             this.Load += new System.EventHandler(this.FormTestReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportBigPlanDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.table1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableDescribeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tableSmallPlanBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,7 +121,10 @@
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
         private System.Windows.Forms.BindingSource table1BindingSource;
         private ReportBigPlanDataSet ReportBigPlanDataSet;
+        private System.Windows.Forms.BindingSource tableDescribeBindingSource;
+        private System.Windows.Forms.BindingSource tableSmallPlanBindingSource;
         private ReportBigPlanDataSetTableAdapters.table1TableAdapter table1TableAdapter;
-
+        private ReportBigPlanDataSetTableAdapters.tableDescribeTableAdapter tableDescribeTableAdapter;
+        private ReportBigPlanDataSetTableAdapters.tableSmallPlanTableAdapter tableSmallPlanTableAdapter;
     }
 }

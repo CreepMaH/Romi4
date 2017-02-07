@@ -26,10 +26,11 @@ namespace Romi4.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=|DataDirectory|\\baza1.mdb")]
-        public string baza1ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\bin\\Debug\\ReportBig" +
+            "Plan.accdb")]
+        public string ReportBigPlanConnectionString {
             get {
-                return ((string)(this["baza1ConnectionString"]));
+                return ((string)(this["ReportBigPlanConnectionString"]));
             }
         }
         
@@ -38,9 +39,9 @@ namespace Romi4.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\\ReportBigPlan.accdb" +
             "")]
-        public string ReportBigPlanConnectionString {
+        public string ReportBigPlanConnectionStringDir {
             get {
-                return ((string)(this["ReportBigPlanConnectionString"]));
+                return ((string)(this["ReportBigPlanConnectionStringDir"]));
             }
         }
     }

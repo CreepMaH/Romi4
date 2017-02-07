@@ -22,25 +22,29 @@ namespace Romi4
         {
             foreach (DataRow dr in dt1.Rows)
             {
-                this.table1TableAdapter.Insert(dr[0].ToString(), dr[1].ToString(),dr[2].ToString(),dr[3].ToString(),
-                    dr[4].ToString(),dr[5].ToString(),dr[6].ToString(),dr[7].ToString(),dr[8].ToString(),dr[9].ToString(),
+                this.table1TableAdapter.Insert(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
+                    dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
                     dr[10].ToString());
             }
+
             this.table1TableAdapter.Fill(this.ReportBigPlanDataSet.table1);
+            this.tableDescribeTableAdapter.Fill(this.ReportBigPlanDataSet.tableDescribe);
+            this.tableSmallPlanTableAdapter.Fill(this.ReportBigPlanDataSet.tableSmallPlan);
+
             this.reportViewer1.RefreshReport();
         }
 
         private void FormTestReport_FormClosed(object sender, FormClosedEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
-
+            
             foreach (DataRow dr in this.ReportBigPlanDataSet.table1.Rows)
             {
                 this.table1TableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
                     dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
                     dr[10].ToString());
             }
-
+            
             Cursor.Current = Cursors.Arrow;
         }
     }
