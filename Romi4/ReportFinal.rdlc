@@ -6,7 +6,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>0.92774cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.43122cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -15,33 +18,30 @@
               <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.97619cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.95972cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.53758cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.23542cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.94979cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.97625cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.05562cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>1.10271cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -52,11 +52,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>num</Value>
-                              <Style />
+                              <Value>№</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox160</rd:DefaultName>
@@ -82,11 +86,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Дата взноса</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox150</rd:DefaultName>
@@ -112,11 +120,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Паевой взнос, кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox151</rd:DefaultName>
@@ -142,11 +154,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Паевой взнос, уч.п.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox152</rd:DefaultName>
@@ -172,11 +188,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Накопленная площадь, кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox153</rd:DefaultName>
@@ -202,11 +222,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Невыкупл. остаток, кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox154</rd:DefaultName>
@@ -232,11 +256,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Рейтинг</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox155</rd:DefaultName>
@@ -262,11 +290,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ер</Value>
-                              <Style />
+                              <Value>Индив. рента, кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox156</rd:DefaultName>
@@ -292,11 +324,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>е</Value>
-                              <Style />
+                              <Value>Взнос за влад. и польз., кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox157</rd:DefaultName>
@@ -322,11 +358,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>е</Value>
-                              <Style />
+                              <Value>Итого платежей, кв.м.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox158</rd:DefaultName>
@@ -352,11 +392,15 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>е</Value>
-                              <Style />
+                              <Value>Итого платежей, уч.п.</Value>
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox159</rd:DefaultName>
@@ -391,7 +435,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>num</rd:DefaultName>
@@ -406,7 +452,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -422,7 +467,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>currentDate</rd:DefaultName>
@@ -452,7 +499,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>paymentSqM</rd:DefaultName>
@@ -482,7 +531,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>paymentRegPays</rd:DefaultName>
@@ -512,7 +563,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>accumSquare</rd:DefaultName>
@@ -542,7 +595,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>restSquare</rd:DefaultName>
@@ -572,7 +627,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>rating</rd:DefaultName>
@@ -602,7 +659,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>indRent</rd:DefaultName>
@@ -632,7 +691,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>usingPayment</rd:DefaultName>
@@ -662,7 +723,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>monthlySummarySqM</rd:DefaultName>
@@ -692,7 +755,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Right</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>monthlySummaryRegPays</rd:DefaultName>
@@ -746,8 +811,8 @@
         <RepeatRowHeaders>true</RepeatRowHeaders>
         <DataSetName>DataSetTable1</DataSetName>
         <Top>16.41745cm</Top>
-        <Height>1.2cm</Height>
-        <Width>27.5cm</Width>
+        <Height>1.70271cm</Height>
+        <Width>27.04953cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -762,17 +827,22 @@
             <TextRuns>
               <TextRun>
                 <Value>ИНДИВИДУАЛЬНЫЙ ПЛАН НАКОПЛЕНИЯ-ВЫКУПА ЧЛЕНА КООПЕРАТИВА</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
-            <Style />
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
         <Top>2.52942cm</Top>
         <Left>7.61683cm</Left>
         <Height>1.02333cm</Height>
-        <Width>7.81812cm</Width>
+        <Width>8.94243cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -792,7 +862,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Описание целевой недвижимости:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -822,7 +894,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Наименование:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -832,7 +906,7 @@
         <Top>4.45347cm</Top>
         <Left>0.90971cm</Left>
         <Height>0.62645cm</Height>
-        <Width>2.6213cm</Width>
+        <Width>2.9388cm</Width>
         <ZIndex>3</ZIndex>
         <Style>
           <Border>
@@ -852,7 +926,9 @@
             <TextRuns>
               <TextRun>
                 <Value>1.</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -882,7 +958,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Область, район, нас. пункт:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -890,7 +968,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>4.45347cm</Top>
-        <Left>7.27046cm</Left>
+        <Left>10.41018cm</Left>
         <Height>0.62645cm</Height>
         <Width>5.22954cm</Width>
         <ZIndex>5</ZIndex>
@@ -912,19 +990,23 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!city.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
-        <Top>4.45347cm</Top>
-        <Left>12.5cm</Left>
+        <Top>4.4182cm</Top>
+        <Left>15.63972cm</Left>
         <Height>0.62645cm</Height>
         <Width>2.93495cm</Width>
         <ZIndex>6</ZIndex>
@@ -946,7 +1028,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Местоположение в границах улиц:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -956,7 +1040,7 @@
         <Top>5.07992cm</Top>
         <Left>0.90971cm</Left>
         <Height>0.62645cm</Height>
-        <Width>5.7963cm</Width>
+        <Width>6.32548cm</Width>
         <ZIndex>7</ZIndex>
         <Style>
           <Border>
@@ -976,11 +1060,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!street.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -988,7 +1076,7 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>5.07992cm</Top>
-        <Left>6.74129cm</Left>
+        <Left>7.25537cm</Left>
         <Height>0.62645cm</Height>
         <Width>3.66889cm</Width>
         <ZIndex>8</ZIndex>
@@ -1015,20 +1103,11 @@
             </TextRuns>
             <Style />
           </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>к договору №</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
         <Top>0.36724cm</Top>
         <Left>23.51828cm</Left>
-        <Height>1.02333cm</Height>
+        <Height>0.57354cm</Height>
         <Width>3.05562cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
@@ -1056,8 +1135,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>1.69016cm</Top>
-        <Left>23.59766cm</Left>
+        <Top>1.65543cm</Top>
+        <Left>23.51828cm</Left>
         <Height>0.6cm</Height>
         <Width>0.56854cm</Width>
         <ZIndex>10</ZIndex>
@@ -1086,8 +1165,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.69016cm</Top>
-        <Left>24.30731cm</Left>
+        <Top>1.65543cm</Top>
+        <Left>24.22793cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -1109,7 +1188,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Количество комнат:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1139,11 +1220,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!roomsNum.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1173,7 +1258,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Характеристика здания:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1203,11 +1290,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!buildingDescribe.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1237,7 +1328,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Общая площадь (ориентировочно):</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1247,7 +1340,7 @@
         <Top>5.70637cm</Top>
         <Left>10.44546cm</Left>
         <Height>0.62645cm</Height>
-        <Width>6.1138cm</Width>
+        <Width>6.45776cm</Width>
         <ZIndex>16</ZIndex>
         <Style>
           <Border>
@@ -1267,11 +1360,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!squareRange.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1279,9 +1376,9 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>5.70637cm</Top>
-        <Left>16.55926cm</Left>
+        <Left>16.97377cm</Left>
         <Height>0.62645cm</Height>
-        <Width>3.66889cm</Width>
+        <Width>3.57188cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -1301,7 +1398,9 @@
             <TextRuns>
               <TextRun>
                 <Value>ПАРАМЕТРЫ ЦЕЛЕВОЙ НЕДВИЖИМОСТИ:</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1330,7 +1429,7 @@
               <Width>0.5844cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>8.72894cm</Width>
+              <Width>9.48244cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -1353,7 +1452,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>2.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1383,7 +1484,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Ориентировочная площадь целевой недвижимости</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1412,7 +1515,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!square.Value</Value>
+                              <Value>=First(Fields!square.Value, "DataSetTableDescribe")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1478,7 +1581,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>3.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1508,7 +1613,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Стоимость целевой недвижимости</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1537,7 +1644,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!price.Value</Value>
+                              <Value>=First(Fields!price.Value, "DataSetTableDescribe")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1603,7 +1710,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>4.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1633,7 +1742,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Стоимость квадратного метра</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1662,7 +1773,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!price.Value/Fields!square.Value</Value>
+                              <Value>=First(Fields!sqMPrice.Value, "DataSetTableDescribe")</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1741,7 +1852,7 @@
         <Top>8.21355cm</Top>
         <Left>0.34334cm</Left>
         <Height>1.8cm</Height>
-        <Width>14.31334cm</Width>
+        <Width>15.06684cm</Width>
         <ZIndex>19</ZIndex>
         <Style>
           <Border>
@@ -1757,11 +1868,15 @@
             <TextRuns>
               <TextRun>
                 <Value>=First(Fields!type.Value, "DataSetTableDescribe")</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
               <TextRun>
                 <Value>;</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1769,7 +1884,7 @@
         </Paragraphs>
         <rd:DefaultName>type1</rd:DefaultName>
         <Top>4.44465cm</Top>
-        <Left>3.53102cm</Left>
+        <Left>4.04751cm</Left>
         <Height>0.6cm</Height>
         <Width>3.70417cm</Width>
         <ZIndex>20</ZIndex>
@@ -1791,7 +1906,9 @@
             <TextRuns>
               <TextRun>
                 <Value>ПАРАМЕТРЫ ИНДИВИДУАЛЬНОГО ПЛАНА ПО СОСТОЯНИЮ НА</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1821,7 +1938,9 @@
             <TextRuns>
               <TextRun>
                 <Value>=FormatDateTime(Globals!ExecutionTime, DateFormat.ShortDate)</Value>
-                <Style />
+                <Style>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -1847,10 +1966,10 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.5844cm</Width>
+              <Width>0.58439cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.9112cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -1868,7 +1987,7 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox73">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1876,13 +1995,15 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox73</rd:DefaultName>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -1898,7 +2019,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox74">
+                    <Textbox Name="Textbox79">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1906,7 +2027,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value />
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1928,7 +2051,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox75">
+                    <Textbox Name="Textbox80">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1936,7 +2059,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>рублей</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1958,7 +2083,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox76">
+                    <Textbox Name="Textbox81">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1966,7 +2091,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>кв.м.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -1988,7 +2115,7 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox77">
+                    <Textbox Name="Textbox82">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
@@ -1996,7 +2123,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>пересчёт в учётный пай</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2031,7 +2160,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!num.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2061,7 +2192,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!paramName.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2187,9 +2320,11 @@
         <TablixRowHierarchy>
           <TablixMembers>
             <TablixMember>
+              <KeepWithGroup>After</KeepWithGroup>
+            </TablixMember>
+            <TablixMember>
               <Group Name="Подробности2" />
               <TablixMembers>
-                <TablixMember />
                 <TablixMember />
               </TablixMembers>
             </TablixMember>
@@ -2199,7 +2334,7 @@
         <Top>11.58558cm</Top>
         <Left>0.34334cm</Left>
         <Height>1.2cm</Height>
-        <Width>14.31334cm</Width>
+        <Width>17.72453cm</Width>
         <ZIndex>23</ZIndex>
         <Style>
           <Border>
@@ -2214,7 +2349,7 @@
               <Width>0.99458cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>10.22134cm</Width>
+              <Width>11.22676cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -2237,7 +2372,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>12.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2267,7 +2404,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Полный срок финансирования целевой недвижимости</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2362,7 +2501,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>13.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2392,7 +2533,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Предполагаемый период накопления (осмотрительный план)</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2487,7 +2630,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>14.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2517,7 +2662,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Предполагаемый период выкупа</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2612,7 +2759,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>15.</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2642,7 +2791,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Заселение по реалистичному плану</Value>
-                              <Style />
+                              <Style>
+                                <FontWeight>Bold</FontWeight>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -2751,7 +2902,7 @@
         <Top>13.08133cm</Top>
         <Left>0.34334cm</Left>
         <Height>2.4cm</Height>
-        <Width>16.21592cm</Width>
+        <Width>17.22134cm</Width>
         <ZIndex>24</ZIndex>
         <Style>
           <Border>
@@ -2767,7 +2918,9 @@
             <TextRuns>
               <TextRun>
                 <Value>Индивидуальный накопительный план/план выкупа</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2797,7 +2950,9 @@
             <TextRuns>
               <TextRun>
                 <Value>16.</Value>
-                <Style />
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
               </TextRun>
             </TextRuns>
             <Style />
@@ -2819,11 +2974,238 @@
           <PaddingBottom>2pt</PaddingBottom>
         </Style>
       </Textbox>
+      <Textbox Name="Textbox22">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Председатель</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>18.8087cm</Top>
+        <Left>0.34334cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.74005cm</Width>
+        <ZIndex>27</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox23">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Член кооператива</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>18.8087cm</Top>
+        <Left>7.39456cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.88912cm</Width>
+        <ZIndex>28</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox26">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>______________/</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+              <TextRun>
+                <Value>Р.В. Красникова/</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                  <TextDecoration>Underline</TextDecoration>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>19.77998cm</Top>
+        <Left>0.34333cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.94151cm</Width>
+        <ZIndex>29</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox28">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>__________________/____________________/</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>19.77998cm</Top>
+        <Left>7.39455cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.67013cm</Width>
+        <ZIndex>30</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox41">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>М.П.</Value>
+                <Style>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox22</rd:DefaultName>
+        <Top>20.85154cm</Top>
+        <Left>0.34334cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.99458cm</Width>
+        <ZIndex>31</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox42">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>к договору №</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox24</rd:DefaultName>
+        <Top>1.04661cm</Top>
+        <Left>23.51828cm</Left>
+        <Height>0.57354cm</Height>
+        <Width>2.42062cm</Width>
+        <ZIndex>32</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="contractNum">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=First(Fields!contractNum.Value, "DataSetTableDescribe")</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>contractNum</rd:DefaultName>
+        <Top>1.0196cm</Top>
+        <Left>26.00946cm</Left>
+        <Height>0.6cm</Height>
+        <Width>0.90368cm</Width>
+        <ZIndex>33</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
-    <Height>7.50892in</Height>
+    <Height>9.4985in</Height>
     <Style />
   </Body>
-  <Width>11.01425in</Width>
+  <Width>11.2955in</Width>
   <Page>
     <PageHeader>
       <Height>0.84667cm</Height>
@@ -2984,6 +3366,10 @@
           <DataField>price</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="sqMPrice">
+          <DataField>sqMPrice</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="fullTime">
           <DataField>fullTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -2998,6 +3384,10 @@
         </Field>
         <Field Name="incomeTime">
           <DataField>incomeTime</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="contractNum">
+          <DataField>contractNum</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

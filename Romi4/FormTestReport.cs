@@ -11,40 +11,71 @@ namespace Romi4
 {
     public partial class FormTestReport : Form
     {
-        DataTable dt1 = new DataTable();
-        public FormTestReport(DataTable dt)
+        DataTable dtBigPlan = new DataTable();
+        DataTable dtSmallPlan = new DataTable();
+        List<string> listDescribe = new List<string>();
+        
+        public FormTestReport(DataTable dtVarBigPlan, DataTable dtVarSmallPlan, List<string> listVarDescribe)
         {
             InitializeComponent();
-            dt1 = dt;
+
+            dtBigPlan = dtVarBigPlan;
+            dtSmallPlan = dtVarSmallPlan;
+            listDescribe = listVarDescribe;
         }
 
         private void FormTestReport_Load(object sender, EventArgs e)
         {
-            foreach (DataRow dr in dt1.Rows)
+            //Заполнение таблицы большого плана в БД
+            foreach (DataRow dr in dtBigPlan.Rows)
             {
-                this.table1TableAdapter.Insert(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
+                table1TableAdapter.Insert(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
                     dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
                     dr[10].ToString());
             }
 
-            this.table1TableAdapter.Fill(this.ReportBigPlanDataSet.table1);
-            this.tableDescribeTableAdapter.Fill(this.ReportBigPlanDataSet.tableDescribe);
-            this.tableSmallPlanTableAdapter.Fill(this.ReportBigPlanDataSet.tableSmallPlan);
+            //Заполнение таблицы малого плана в БД
+            foreach (DataRow dr in dtSmallPlan.Rows)
+            {
+                tableSmallPlanTableAdapter.Insert(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), 
+                    dr[3].ToString(), dr[4].ToString());
+            }
 
-            this.reportViewer1.RefreshReport();
+            //Заполнение таблицы шапки в БД
+            tableDescribeTableAdapter.Insert(listDescribe[0], listDescribe[1], listDescribe[2], listDescribe[3],
+                 listDescribe[4], listDescribe[5], listDescribe[6], listDescribe[7], listDescribe[8], 
+                 listDescribe[9], listDescribe[10], listDescribe[11], listDescribe[12], listDescribe[13]);
+
+            table1TableAdapter.Fill(ReportBigPlanDataSet.table1);
+            tableDescribeTableAdapter.Fill(ReportBigPlanDataSet.tableDescribe);
+            tableSmallPlanTableAdapter.Fill(ReportBigPlanDataSet.tableSmallPlan);
+
+            reportViewer1.RefreshReport();
         }
 
         private void FormTestReport_FormClosed(object sender, FormClosedEventArgs e)
         {
             Cursor.Current = Cursors.WaitCursor;
             
-            foreach (DataRow dr in this.ReportBigPlanDataSet.table1.Rows)
+            //Очистка таблиц базы данных
+            foreach (DataRow dr in ReportBigPlanDataSet.table1.Rows)
             {
-                this.table1TableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
+                table1TableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
                     dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
                     dr[10].ToString());
             }
-            
+            foreach (DataRow dr in ReportBigPlanDataSet.tableSmallPlan.Rows)
+            {
+                tableSmallPlanTableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
+                    dr[4].ToString());
+            }
+            foreach (DataRow dr in ReportBigPlanDataSet.tableDescribe.Rows)
+            {
+                tableDescribeTableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
+                    dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
+                    dr[10].ToString(), dr[11].ToString(), dr[12].ToString(), dr[13].ToString());
+            }
+
             Cursor.Current = Cursors.Arrow;
         }
     }

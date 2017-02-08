@@ -83,6 +83,8 @@
             this.dataGridViewBigPlan = new System.Windows.Forms.DataGridView();
             this.bindingSourceSmallPlan = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSourceBigPlan = new System.Windows.Forms.BindingSource(this.components);
+            this.labelContractNum = new System.Windows.Forms.Label();
+            this.textBoxContractNum = new System.Windows.Forms.TextBox();
             this.groupBoxDescribe.SuspendLayout();
             this.groupBoxBuildingParams.SuspendLayout();
             this.groupBoxPlanParams.SuspendLayout();
@@ -441,7 +443,7 @@
             this.textBoxSettlementRating.Name = "textBoxSettlementRating";
             this.textBoxSettlementRating.Size = new System.Drawing.Size(60, 20);
             this.textBoxSettlementRating.TabIndex = 32;
-            this.textBoxSettlementRating.Text = "0,5";
+            this.textBoxSettlementRating.Text = "1";
             this.textBoxSettlementRating.TextChanged += new System.EventHandler(this.textBoxSettlementRating_TextChanged);
             // 
             // labelFirstPayment
@@ -595,8 +597,8 @@
             // 
             this.dataGridViewBigPlan.AllowUserToAddRows = false;
             this.dataGridViewBigPlan.AllowUserToDeleteRows = false;
-            this.dataGridViewBigPlan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewBigPlan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewBigPlan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBigPlan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewBigPlan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -610,12 +612,30 @@
             this.dataGridViewBigPlan.TabIndex = 28;
             this.dataGridViewBigPlan.TabStop = false;
             // 
+            // labelContractNum
+            // 
+            this.labelContractNum.AutoSize = true;
+            this.labelContractNum.Location = new System.Drawing.Point(843, 52);
+            this.labelContractNum.Name = "labelContractNum";
+            this.labelContractNum.Size = new System.Drawing.Size(94, 13);
+            this.labelContractNum.TabIndex = 30;
+            this.labelContractNum.Text = "Номер договора:";
+            // 
+            // textBoxContractNum
+            // 
+            this.textBoxContractNum.Location = new System.Drawing.Point(943, 49);
+            this.textBoxContractNum.Name = "textBoxContractNum";
+            this.textBoxContractNum.Size = new System.Drawing.Size(60, 20);
+            this.textBoxContractNum.TabIndex = 31;
+            // 
             // FormPreData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1300, 702);
+            this.Controls.Add(this.textBoxContractNum);
+            this.Controls.Add(this.labelContractNum);
             this.Controls.Add(this.dataGridViewBigPlan);
             this.Controls.Add(this.groupBoxPlanParams);
             this.Controls.Add(this.groupBoxBuildingParams);
@@ -702,5 +722,7 @@
         private System.Windows.Forms.Label labelSettlementRating;
         private System.Windows.Forms.TextBox textBoxSettlementRating;
         private System.Windows.Forms.Button buttonChangeRegPayPriceInFile;
+        private System.Windows.Forms.Label labelContractNum;
+        private System.Windows.Forms.TextBox textBoxContractNum;
     }
 }

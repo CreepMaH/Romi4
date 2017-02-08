@@ -12,7 +12,14 @@ namespace Romi4
 {
     public partial class FormPreData : Form
     {
-        //DataTable bigTable = new DataTable();
+        //Переменные временных показателей накопления. Присваиваются в CalcBigPlan() и используются
+        //при выводе на печать
+        string fullTime;
+        string accumTime;
+        string buyoutTime;
+        string incomeTime;
+        string settlementPayment;
+
         public FormPreData()
         {
             InitializeComponent();
@@ -210,8 +217,10 @@ namespace Romi4
                 arrPaymentSqM.Add(paymentSqM);
 
                 AddRowToTable(bigTable, num, paymentSqM, paymentRegPays, accumSquare, restSquare, rating, indRent, usingPayment, monthlySummarySqM, monthlySummaryRegPays);
-                
+
                 //От второй строки и до заселения
+                bool incTimeAdded = false;      //Индикатор присвоения значения переменной incomeTime (время заселения по реалистичному плану)
+
                 while (rating < ParseStringToDouble(textBoxSettlementRating.Text))
                 {
                     num++;
@@ -226,6 +235,13 @@ namespace Romi4
                     indRent = accumSquare * 0.015 / 12;
                     rating = CalcRating(arrAccum, restSquare, indRent, monthlyPaymentSqM);
 
+                    //Время заселения по реалистичному плану (на печать)
+                    if ((rating > 0.1) && (!incTimeAdded))
+                    {
+                        incomeTime = num.ToString();
+                        incTimeAdded = true;
+                    }
+
                     arrRating.Add(rating);
                     arrRest.Add(restSquare);
                     arrIndRent.Add(indRent);
@@ -234,8 +250,12 @@ namespace Romi4
                     AddRowToTable(bigTable, num, paymentSqM, paymentRegPays, accumSquare, restSquare, rating, indRent, usingPayment, monthlySummarySqM, monthlySummaryRegPays);
                 }
 
+                //Время накопления по осмотрительному плану (на печать)
+                accumTime = num.ToString();
+
                 //Первая строка после заселения
                 settlPaymentNum = arrRest.Last() * 0.05;
+                settlementPayment = (settlPaymentNum * sqMPrice).ToString("0.00");
 
                 num++;
                 monthlySummarySqM = monthlyPaymentSqM;
@@ -292,7 +312,12 @@ namespace Romi4
                 rating = 0.0;
 
                 AddRowToTable(bigTable, num, paymentSqM, paymentRegPays, accumSquare, restSquare, rating, indRent, usingPayment, monthlySummarySqM, monthlySummaryRegPays);
-                
+
+                //Полное время финансирования (на печать)
+                fullTime = num.ToString();
+                //Предполагаемый период выкупа (на печать)
+                buyoutTime = arrUsingPayment.Count().ToString();
+
                 //Строка итогов
                 double sumOfMonthlyPaymentsSqM = firstPaymentSqM + monthlyPaymentSqM * (num - 2) + monthlySummarySqM;
                 
@@ -548,6 +573,7 @@ namespace Romi4
         {
             Cursor.Current = Cursors.WaitCursor;
 
+            //Таблица плана накопления
             DataTable bigTable = new DataTable();
             bigTable.Columns.Add(new DataColumn("№", typeof(string)));
             bigTable.Columns.Add(new DataColumn("Дата платежа", typeof(string)));
@@ -565,8 +591,46 @@ namespace Romi4
             {
                 bigTable.Rows.Add(dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value, dgv.Cells[4].Value, dgv.Cells[5].Value, dgv.Cells[6].Value, dgv.Cells[7].Value, dgv.Cells[8].Value, dgv.Cells[9].Value, dgv.Cells[10].Value);
             }
-            
-            Form fTest = new FormTestReport(bigTable);
+
+            //Таблица малого плана
+            DataTable smallTable = new DataTable();
+            smallTable.Columns.Add(new DataColumn("Номер пункта", typeof(string)));
+            smallTable.Columns.Add(new DataColumn("Название характеристики", typeof(string)));
+            smallTable.Columns.Add(new DataColumn("Рублей", typeof(string)));
+            smallTable.Columns.Add(new DataColumn("Кв. метров", typeof(string)));
+            smallTable.Columns.Add(new DataColumn("Уч. паёв", typeof(string)));
+
+            smallTable.Rows.Add("5.", "Стоимость учётного пая", textBoxRegPayPrice.Text, "", "");
+            smallTable.Rows.Add("6.", "Стоимость квадратного метра", textBoxSqMPrice.Text, "", "");
+
+            int paragraphNum = 7;       //Номер пункта в отчёте
+            foreach (DataGridViewRow dgv in dataGridViewSmallPlanParams.Rows)
+            {
+                smallTable.Rows.Add(paragraphNum.ToString(), dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value);
+                paragraphNum++;
+            }
+
+            smallTable.Rows.Add("11.", "Вступительный взнос", settlementPayment, "", "");
+
+            //Список строк для шапки отчёта
+            List<string> listDescribe = new List<string>();
+
+            listDescribe.Add(textBoxName.Text);
+            listDescribe.Add(textBoxLocation.Text);
+            listDescribe.Add(textBoxPosAtStreet.Text);
+            listDescribe.Add(textBoxRoomsNum.Text);
+            listDescribe.Add(textBoxSquareRange.Text);
+            listDescribe.Add(textBoxBuildingType.Text);
+            listDescribe.Add(textBoxSquare.Text);
+            listDescribe.Add(textBoxPrice.Text);
+            listDescribe.Add((ParseStringToDouble(textBoxPrice.Text) / ParseStringToDouble(textBoxSquare.Text)).ToString("0.00"));
+            listDescribe.Add(fullTime);
+            listDescribe.Add(accumTime);
+            listDescribe.Add(buyoutTime);
+            listDescribe.Add(incomeTime);
+            listDescribe.Add(textBoxContractNum.Text);
+
+            Form fTest = new FormTestReport(bigTable, smallTable, listDescribe);
             fTest.Show();
 
             Cursor.Current = Cursors.Arrow;
