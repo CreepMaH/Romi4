@@ -126,6 +126,7 @@
             this.Name = "FormNewPayment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение платежа";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormNewPayment_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();
 

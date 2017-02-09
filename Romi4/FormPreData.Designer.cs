@@ -61,13 +61,9 @@
             this.labelSqMPriceUnit = new System.Windows.Forms.Label();
             this.groupBoxPlanParams = new System.Windows.Forms.GroupBox();
             this.buttonChangeRegPayPriceInFile = new System.Windows.Forms.Button();
-            this.buttonCalcBigPlan = new System.Windows.Forms.Button();
             this.labelFirstPaymentUnit = new System.Windows.Forms.Label();
-            this.labelSettlementRating = new System.Windows.Forms.Label();
-            this.textBoxSettlementRating = new System.Windows.Forms.TextBox();
             this.labelFirstPayment = new System.Windows.Forms.Label();
             this.textBoxFirstPayment = new System.Windows.Forms.TextBox();
-            this.dataGridViewSmallPlanParams = new System.Windows.Forms.DataGridView();
             this.labelRegPayPriceUnit = new System.Windows.Forms.Label();
             this.labelMonthlyPaymentRegPays = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -77,6 +73,12 @@
             this.labelMonthlyPaymentRubles = new System.Windows.Forms.Label();
             this.textBoxMonthlyPaymentSqM = new System.Windows.Forms.TextBox();
             this.labelMonthlyPaymentSqM = new System.Windows.Forms.Label();
+            this.labelDiffPaymentValue = new System.Windows.Forms.Label();
+            this.checkBoxDiffPayment = new System.Windows.Forms.CheckBox();
+            this.buttonCalcBigPlan = new System.Windows.Forms.Button();
+            this.labelSettlementRating = new System.Windows.Forms.Label();
+            this.textBoxSettlementRating = new System.Windows.Forms.TextBox();
+            this.dataGridViewSmallPlanParams = new System.Windows.Forms.DataGridView();
             this.menuStripPreData = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.печатьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,13 +87,11 @@
             this.bindingSourceBigPlan = new System.Windows.Forms.BindingSource(this.components);
             this.labelContractNum = new System.Windows.Forms.Label();
             this.textBoxContractNum = new System.Windows.Forms.TextBox();
-            this.checkBoxDiffPayment = new System.Windows.Forms.CheckBox();
-            this.labelDiffPaymentValue = new System.Windows.Forms.Label();
             this.groupBoxDescribe.SuspendLayout();
             this.groupBoxBuildingParams.SuspendLayout();
             this.groupBoxPlanParams.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSmallPlanParams)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSmallPlanParams)).BeginInit();
             this.menuStripPreData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBigPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSmallPlan)).BeginInit();
@@ -316,7 +316,7 @@
             this.groupBoxBuildingParams.Controls.Add(this.labelIncomePayment);
             this.groupBoxBuildingParams.Controls.Add(this.labelSqMPrice);
             this.groupBoxBuildingParams.Controls.Add(this.labelSqMPriceUnit);
-            this.groupBoxBuildingParams.Location = new System.Drawing.Point(549, 27);
+            this.groupBoxBuildingParams.Location = new System.Drawing.Point(12, 289);
             this.groupBoxBuildingParams.Name = "groupBoxBuildingParams";
             this.groupBoxBuildingParams.Size = new System.Drawing.Size(258, 149);
             this.groupBoxBuildingParams.TabIndex = 13;
@@ -378,24 +378,18 @@
             // 
             // groupBoxPlanParams
             // 
-            this.groupBoxPlanParams.Controls.Add(this.labelDiffPaymentValue);
-            this.groupBoxPlanParams.Controls.Add(this.checkBoxDiffPayment);
             this.groupBoxPlanParams.Controls.Add(this.buttonChangeRegPayPriceInFile);
-            this.groupBoxPlanParams.Controls.Add(this.buttonCalcBigPlan);
             this.groupBoxPlanParams.Controls.Add(this.labelFirstPaymentUnit);
-            this.groupBoxPlanParams.Controls.Add(this.labelSettlementRating);
-            this.groupBoxPlanParams.Controls.Add(this.textBoxSettlementRating);
             this.groupBoxPlanParams.Controls.Add(this.labelFirstPayment);
             this.groupBoxPlanParams.Controls.Add(this.textBoxFirstPayment);
-            this.groupBoxPlanParams.Controls.Add(this.dataGridViewSmallPlanParams);
             this.groupBoxPlanParams.Controls.Add(this.labelRegPayPriceUnit);
             this.groupBoxPlanParams.Controls.Add(this.labelRegPayPrice);
             this.groupBoxPlanParams.Controls.Add(this.textBoxRegPayPrice);
             this.groupBoxPlanParams.Controls.Add(this.labelMonthlyPaymentRegPays);
             this.groupBoxPlanParams.Controls.Add(this.panel1);
-            this.groupBoxPlanParams.Location = new System.Drawing.Point(12, 200);
+            this.groupBoxPlanParams.Location = new System.Drawing.Point(12, 182);
             this.groupBoxPlanParams.Name = "groupBoxPlanParams";
-            this.groupBoxPlanParams.Size = new System.Drawing.Size(1071, 156);
+            this.groupBoxPlanParams.Size = new System.Drawing.Size(531, 101);
             this.groupBoxPlanParams.TabIndex = 14;
             this.groupBoxPlanParams.TabStop = false;
             this.groupBoxPlanParams.Text = "Параметры индивидуального плана";
@@ -413,17 +407,6 @@
             this.buttonChangeRegPayPriceInFile.Visible = false;
             this.buttonChangeRegPayPriceInFile.MouseDown += new System.Windows.Forms.MouseEventHandler(this.buttonChangeRegPayPriceInFile_MouseDown);
             // 
-            // buttonCalcBigPlan
-            // 
-            this.buttonCalcBigPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonCalcBigPlan.Location = new System.Drawing.Point(377, 104);
-            this.buttonCalcBigPlan.Name = "buttonCalcBigPlan";
-            this.buttonCalcBigPlan.Size = new System.Drawing.Size(142, 37);
-            this.buttonCalcBigPlan.TabIndex = 28;
-            this.buttonCalcBigPlan.Text = "Рассчитать план";
-            this.buttonCalcBigPlan.UseVisualStyleBackColor = false;
-            this.buttonCalcBigPlan.Click += new System.EventHandler(this.buttonCalcBigPlan_Click);
-            // 
             // labelFirstPaymentUnit
             // 
             this.labelFirstPaymentUnit.AutoSize = true;
@@ -432,23 +415,6 @@
             this.labelFirstPaymentUnit.Size = new System.Drawing.Size(27, 13);
             this.labelFirstPaymentUnit.TabIndex = 27;
             this.labelFirstPaymentUnit.Text = "руб.";
-            // 
-            // labelSettlementRating
-            // 
-            this.labelSettlementRating.Location = new System.Drawing.Point(6, 107);
-            this.labelSettlementRating.Name = "labelSettlementRating";
-            this.labelSettlementRating.Size = new System.Drawing.Size(85, 31);
-            this.labelSettlementRating.TabIndex = 31;
-            this.labelSettlementRating.Text = "Заселение при рейтинге:";
-            // 
-            // textBoxSettlementRating
-            // 
-            this.textBoxSettlementRating.Location = new System.Drawing.Point(116, 113);
-            this.textBoxSettlementRating.Name = "textBoxSettlementRating";
-            this.textBoxSettlementRating.Size = new System.Drawing.Size(60, 20);
-            this.textBoxSettlementRating.TabIndex = 32;
-            this.textBoxSettlementRating.Text = "1";
-            this.textBoxSettlementRating.TextChanged += new System.EventHandler(this.textBoxSettlementRating_TextChanged);
             // 
             // labelFirstPayment
             // 
@@ -466,22 +432,6 @@
             this.textBoxFirstPayment.TabIndex = 10;
             this.textBoxFirstPayment.Text = "10000";
             this.textBoxFirstPayment.TextChanged += new System.EventHandler(this.textBoxFirstPayment_TextChanged);
-            // 
-            // dataGridViewSmallPlanParams
-            // 
-            this.dataGridViewSmallPlanParams.AllowUserToAddRows = false;
-            this.dataGridViewSmallPlanParams.AllowUserToDeleteRows = false;
-            this.dataGridViewSmallPlanParams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViewSmallPlanParams.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
-            this.dataGridViewSmallPlanParams.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridViewSmallPlanParams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSmallPlanParams.Location = new System.Drawing.Point(537, 19);
-            this.dataGridViewSmallPlanParams.Name = "dataGridViewSmallPlanParams";
-            this.dataGridViewSmallPlanParams.ReadOnly = true;
-            this.dataGridViewSmallPlanParams.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
-            this.dataGridViewSmallPlanParams.Size = new System.Drawing.Size(525, 122);
-            this.dataGridViewSmallPlanParams.TabIndex = 20;
-            this.dataGridViewSmallPlanParams.TabStop = false;
             // 
             // labelRegPayPriceUnit
             // 
@@ -572,6 +522,71 @@
             this.labelMonthlyPaymentSqM.TabIndex = 31;
             this.labelMonthlyPaymentSqM.Text = "кв. м.";
             // 
+            // labelDiffPaymentValue
+            // 
+            this.labelDiffPaymentValue.AutoSize = true;
+            this.labelDiffPaymentValue.Location = new System.Drawing.Point(745, 231);
+            this.labelDiffPaymentValue.Name = "labelDiffPaymentValue";
+            this.labelDiffPaymentValue.Size = new System.Drawing.Size(133, 13);
+            this.labelDiffPaymentValue.TabIndex = 35;
+            this.labelDiffPaymentValue.Text = "взнос_после_заселения";
+            this.labelDiffPaymentValue.Visible = false;
+            // 
+            // checkBoxDiffPayment
+            // 
+            this.checkBoxDiffPayment.AutoSize = true;
+            this.checkBoxDiffPayment.Location = new System.Drawing.Point(745, 211);
+            this.checkBoxDiffPayment.Name = "checkBoxDiffPayment";
+            this.checkBoxDiffPayment.Size = new System.Drawing.Size(186, 17);
+            this.checkBoxDiffPayment.TabIndex = 34;
+            this.checkBoxDiffPayment.Text = "Другой взнос после заселения";
+            this.checkBoxDiffPayment.UseVisualStyleBackColor = true;
+            this.checkBoxDiffPayment.CheckedChanged += new System.EventHandler(this.checkBoxDiffPayment_CheckedChanged);
+            // 
+            // buttonCalcBigPlan
+            // 
+            this.buttonCalcBigPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.buttonCalcBigPlan.Location = new System.Drawing.Point(296, 401);
+            this.buttonCalcBigPlan.Name = "buttonCalcBigPlan";
+            this.buttonCalcBigPlan.Size = new System.Drawing.Size(142, 37);
+            this.buttonCalcBigPlan.TabIndex = 28;
+            this.buttonCalcBigPlan.Text = "Рассчитать план";
+            this.buttonCalcBigPlan.UseVisualStyleBackColor = false;
+            this.buttonCalcBigPlan.Click += new System.EventHandler(this.buttonCalcBigPlan_Click);
+            // 
+            // labelSettlementRating
+            // 
+            this.labelSettlementRating.Location = new System.Drawing.Point(558, 207);
+            this.labelSettlementRating.Name = "labelSettlementRating";
+            this.labelSettlementRating.Size = new System.Drawing.Size(85, 31);
+            this.labelSettlementRating.TabIndex = 31;
+            this.labelSettlementRating.Text = "Заселение при рейтинге:";
+            // 
+            // textBoxSettlementRating
+            // 
+            this.textBoxSettlementRating.Location = new System.Drawing.Point(658, 210);
+            this.textBoxSettlementRating.Name = "textBoxSettlementRating";
+            this.textBoxSettlementRating.Size = new System.Drawing.Size(60, 20);
+            this.textBoxSettlementRating.TabIndex = 32;
+            this.textBoxSettlementRating.Text = "1";
+            this.textBoxSettlementRating.TextChanged += new System.EventHandler(this.textBoxSettlementRating_TextChanged);
+            // 
+            // dataGridViewSmallPlanParams
+            // 
+            this.dataGridViewSmallPlanParams.AllowUserToAddRows = false;
+            this.dataGridViewSmallPlanParams.AllowUserToDeleteRows = false;
+            this.dataGridViewSmallPlanParams.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewSmallPlanParams.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
+            this.dataGridViewSmallPlanParams.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridViewSmallPlanParams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSmallPlanParams.Location = new System.Drawing.Point(18, 444);
+            this.dataGridViewSmallPlanParams.Name = "dataGridViewSmallPlanParams";
+            this.dataGridViewSmallPlanParams.ReadOnly = true;
+            this.dataGridViewSmallPlanParams.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dataGridViewSmallPlanParams.Size = new System.Drawing.Size(525, 122);
+            this.dataGridViewSmallPlanParams.TabIndex = 20;
+            this.dataGridViewSmallPlanParams.TabStop = false;
+            // 
             // menuStripPreData
             // 
             this.menuStripPreData.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -601,25 +616,25 @@
             // 
             this.dataGridViewBigPlan.AllowUserToAddRows = false;
             this.dataGridViewBigPlan.AllowUserToDeleteRows = false;
-            this.dataGridViewBigPlan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewBigPlan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewBigPlan.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBigPlan.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewBigPlan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewBigPlan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBigPlan.Location = new System.Drawing.Point(6, 365);
+            this.dataGridViewBigPlan.Location = new System.Drawing.Point(0, 572);
             this.dataGridViewBigPlan.Name = "dataGridViewBigPlan";
             this.dataGridViewBigPlan.ReadOnly = true;
             this.dataGridViewBigPlan.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dataGridViewBigPlan.ShowCellToolTips = false;
-            this.dataGridViewBigPlan.Size = new System.Drawing.Size(1282, 325);
+            this.dataGridViewBigPlan.Size = new System.Drawing.Size(931, 10);
             this.dataGridViewBigPlan.TabIndex = 28;
             this.dataGridViewBigPlan.TabStop = false;
             // 
             // labelContractNum
             // 
             this.labelContractNum.AutoSize = true;
-            this.labelContractNum.Location = new System.Drawing.Point(843, 52);
+            this.labelContractNum.Location = new System.Drawing.Point(558, 52);
             this.labelContractNum.Name = "labelContractNum";
             this.labelContractNum.Size = new System.Drawing.Size(94, 13);
             this.labelContractNum.TabIndex = 30;
@@ -627,45 +642,31 @@
             // 
             // textBoxContractNum
             // 
-            this.textBoxContractNum.Location = new System.Drawing.Point(943, 49);
+            this.textBoxContractNum.Location = new System.Drawing.Point(658, 49);
             this.textBoxContractNum.Name = "textBoxContractNum";
             this.textBoxContractNum.Size = new System.Drawing.Size(60, 20);
             this.textBoxContractNum.TabIndex = 31;
-            // 
-            // checkBoxDiffPayment
-            // 
-            this.checkBoxDiffPayment.AutoSize = true;
-            this.checkBoxDiffPayment.Location = new System.Drawing.Point(182, 115);
-            this.checkBoxDiffPayment.Name = "checkBoxDiffPayment";
-            this.checkBoxDiffPayment.Size = new System.Drawing.Size(186, 17);
-            this.checkBoxDiffPayment.TabIndex = 34;
-            this.checkBoxDiffPayment.Text = "Другой взнос после заселения";
-            this.checkBoxDiffPayment.UseVisualStyleBackColor = true;
-            this.checkBoxDiffPayment.CheckedChanged += new System.EventHandler(this.checkBoxDiffPayment_CheckedChanged);
-            // 
-            // labelDiffPaymentValue
-            // 
-            this.labelDiffPaymentValue.AutoSize = true;
-            this.labelDiffPaymentValue.Location = new System.Drawing.Point(182, 135);
-            this.labelDiffPaymentValue.Name = "labelDiffPaymentValue";
-            this.labelDiffPaymentValue.Size = new System.Drawing.Size(133, 13);
-            this.labelDiffPaymentValue.TabIndex = 35;
-            this.labelDiffPaymentValue.Text = "взнос_после_заселения";
-            this.labelDiffPaymentValue.Visible = false;
             // 
             // FormPreData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1300, 702);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1300, 592);
+            this.Controls.Add(this.labelDiffPaymentValue);
+            this.Controls.Add(this.buttonCalcBigPlan);
             this.Controls.Add(this.textBoxContractNum);
+            this.Controls.Add(this.checkBoxDiffPayment);
+            this.Controls.Add(this.labelSettlementRating);
+            this.Controls.Add(this.textBoxSettlementRating);
             this.Controls.Add(this.labelContractNum);
             this.Controls.Add(this.dataGridViewBigPlan);
             this.Controls.Add(this.groupBoxPlanParams);
             this.Controls.Add(this.groupBoxBuildingParams);
             this.Controls.Add(this.groupBoxDescribe);
             this.Controls.Add(this.menuStripPreData);
+            this.Controls.Add(this.dataGridViewSmallPlanParams);
             this.MainMenuStrip = this.menuStripPreData;
             this.Name = "FormPreData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -678,9 +679,9 @@
             this.groupBoxBuildingParams.PerformLayout();
             this.groupBoxPlanParams.ResumeLayout(false);
             this.groupBoxPlanParams.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSmallPlanParams)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSmallPlanParams)).EndInit();
             this.menuStripPreData.ResumeLayout(false);
             this.menuStripPreData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBigPlan)).EndInit();
@@ -749,7 +750,7 @@
         private System.Windows.Forms.Button buttonChangeRegPayPriceInFile;
         private System.Windows.Forms.Label labelContractNum;
         private System.Windows.Forms.TextBox textBoxContractNum;
-        private System.Windows.Forms.CheckBox checkBoxDiffPayment;
         private System.Windows.Forms.Label labelDiffPaymentValue;
+        public System.Windows.Forms.CheckBox checkBoxDiffPayment;
     }
 }

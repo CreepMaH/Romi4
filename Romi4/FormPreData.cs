@@ -20,7 +20,7 @@ namespace Romi4
         string incomeTime;
         string settlementPayment;
 
-        string diffPayment;
+        double diffPayment;     //Значение платежа после заселения
 
         public FormPreData()
         {
@@ -39,7 +39,7 @@ namespace Romi4
         }
 
         //Функции
-        public void SetDiffPayment(string diffValue)
+        public void SetDiffPayment(double diffValue)
         {
             diffPayment = diffValue;
         }
@@ -145,6 +145,7 @@ namespace Romi4
                 //Привязка источника данных таблицы
                 bindingSourceSmallPlan.DataSource = smallTable;
                 dataGridViewSmallPlanParams.DataSource = bindingSourceSmallPlan;
+                dataGridViewSmallPlanParams.Height -= 5;
             }
             catch
             {
@@ -265,8 +266,16 @@ namespace Romi4
                 settlementPayment = (settlPaymentNum * sqMPrice).ToString("0.00");
 
                 num++;
-                monthlySummarySqM = monthlyPaymentSqM;
-                monthlySummaryRegPays = monthlySummarySqM * sqMPrice / regPayPrice;
+                if (!checkBoxDiffPayment.Checked)
+                {
+                    monthlySummarySqM = monthlyPaymentSqM;
+                    monthlySummaryRegPays = monthlySummarySqM * sqMPrice / regPayPrice;
+                }
+                else
+                {
+                    monthlySummaryRegPays = diffPayment;
+                    monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                }
                 restSquare = (arrRest.Last() - arrIndRent.Last() - monthlySummarySqM) / 0.995;
                 arrRest.Add(restSquare);
                 usingPayment = restSquare * 0.005;
@@ -285,8 +294,16 @@ namespace Romi4
                 while (restSquare > monthlySummarySqM)
                 {
                     num++;
-                    monthlySummarySqM = monthlyPaymentSqM;
-                    monthlySummaryRegPays = monthlySummarySqM * sqMPrice / regPayPrice;
+                    if (!checkBoxDiffPayment.Checked)
+                    {
+                        monthlySummarySqM = monthlyPaymentSqM;
+                        monthlySummaryRegPays = monthlySummarySqM * sqMPrice / regPayPrice;
+                    }
+                    else
+                    {
+                        monthlySummaryRegPays = diffPayment;
+                        monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                    }
                     restSquare = (arrRest.Last() - monthlySummarySqM) / 0.995;
                     arrRest.Add(restSquare);
                     usingPayment = restSquare * 0.005;
@@ -375,6 +392,8 @@ namespace Romi4
                 //Привязка источника данных таблицы
                 bindingSourceBigPlan.DataSource = bigTable;
                 dataGridViewBigPlan.DataSource = bindingSourceBigPlan;
+
+                dataGridViewBigPlan.Height = dataGridViewBigPlan.Rows.GetRowsHeight(DataGridViewElementStates.Visible) - 40;
                 for (int i = 0; i < dataGridViewBigPlan.Columns.Count; i++)
                 {
                     dataGridViewBigPlan.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;
@@ -613,7 +632,7 @@ namespace Romi4
             int paragraphNum = 7;       //Номер пункта в отчёте
             foreach (DataGridViewRow dgv in dataGridViewSmallPlanParams.Rows)
             {
-                smallTable.Rows.Add(paragraphNum.ToString(), dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value);
+                smallTable.Rows.Add(paragraphNum.ToString() + ".", dgv.Cells[0].Value, dgv.Cells[1].Value, dgv.Cells[2].Value, dgv.Cells[3].Value);
                 paragraphNum++;
             }
 
@@ -660,7 +679,7 @@ namespace Romi4
         {
             if (checkBoxDiffPayment.Checked)
             {
-                Form formNewPayment = new FormNewPayment();
+                Form formNewPayment = new FormNewPayment(textBoxRegPayPrice.Text);
                 formNewPayment.Owner = this;
                 formNewPayment.ShowDialog();
             }

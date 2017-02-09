@@ -11,50 +11,94 @@ namespace Romi4
 {
     public partial class FormNewPayment : Form
     {
-        public FormNewPayment()
+        double regPayPrice;
+
+        public FormNewPayment(string exRegPayPrice)
         {
             InitializeComponent();
+
+            regPayPrice = ParseStringToDouble(exRegPayPrice);
         }
 
-        private void RublesChosen()
+        /// <summary>
+        /// Преобразует строку в число формата "double" независимо от символа разделителя
+        /// </summary>
+        /// <param name="str">Входная строка</param>
+        /// <returns></returns>
+        private double ParseStringToDouble(string str)
         {
-            radioButtonRegPays.Checked = false;
-            textBoxRegPays.Enabled = false;
+            double value;
+            return
+                double.TryParse(str.Replace(",", "."), out value)
+                ? value
+                : double.Parse(str.Replace(".", ","));
         }
 
-        private void RegPaysChosen()
+        /// <summary>
+        /// Делает активным то поле ввода, где установлен RadioButton, а второе деактивирует
+        /// </summary>
+        private void ChangeType()
         {
-            radioButtonRubles.Checked = false;
-            textBoxRubles.Enabled = false;
+            if (radioButtonRegPays.Checked == true)
+            {
+                textBoxRegPays.Enabled = true;
+                textBoxRubles.Enabled = false;
+            }
+            else
+            {
+                textBoxRubles.Enabled = true;
+                textBoxRegPays.Enabled = false;
+            }
         }
 
         private void radioButtonRubles_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButtonRubles.Checked) RublesChosen();
-            else RegPaysChosen();
+            ChangeType();
         }
 
         private void radioButtonRegPays_CheckedChanged(object sender, EventArgs e)
         {
-            if (radioButtonRubles.Checked) RegPaysChosen();
-            else RublesChosen();
+            ChangeType();
         }
 
         private void buttonReject_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.Cancel;
             Close();
         }
 
         private void buttonAccept_Click(object sender, EventArgs e)
         {
-            string diffValue;
+            try
+            {
+                double diffValue;
 
-            if (radioButtonRegPays.Checked) diffValue = textBoxRegPays.Text;
-            else diffValue = textBoxRubles.Text;
+                if (radioButtonRegPays.Checked)
+                {
+                    ParseStringToDouble(textBoxRegPays.Text);
+                    diffValue = ParseStringToDouble(textBoxRegPays.Text);
+                }
+                else
+                {
+                    ParseStringToDouble(textBoxRubles.Text);
+                    diffValue = ParseStringToDouble(textBoxRubles.Text) / regPayPrice;
+                }
 
+                FormPreData formPreData = Owner as FormPreData;
+                formPreData.SetDiffPayment(diffValue);
+                
+                Close();
+            }
+            catch
+            {
+                MessageBox.Show("Проверьте введённые данные. Значение платежа должно быть численным.", "Ошибка данных",
+                    MessageBoxButtons.OK);
+            }
+        }
+
+        private void FormNewPayment_FormClosed(object sender, FormClosedEventArgs e)
+        {
             FormPreData formPreData = Owner as FormPreData;
-            //formPreData.SetDiffPayment(tex)
+            formPreData.checkBoxDiffPayment.Checked = false;
         }
     }
 }
