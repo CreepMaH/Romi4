@@ -20,6 +20,8 @@ namespace Romi4
         string incomeTime;
         string settlementPayment;
 
+        string diffPayment;
+
         public FormPreData()
         {
             InitializeComponent();
@@ -37,6 +39,11 @@ namespace Romi4
         }
 
         //Функции
+        public void SetDiffPayment(string diffValue)
+        {
+            diffPayment = diffValue;
+        }
+
         /// <summary>
         /// Считывает из текстового файла значение стоимости учётного пая и добавляет его на форму
         /// </summary>
@@ -647,6 +654,16 @@ namespace Romi4
             sw.Write(textBoxRegPayPrice.Text);
             sw.Close();
             MessageBox.Show("Изменения внесены успешно", "OK", MessageBoxButtons.OK);
+        }
+
+        private void checkBoxDiffPayment_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBoxDiffPayment.Checked)
+            {
+                Form formNewPayment = new FormNewPayment();
+                formNewPayment.Owner = this;
+                formNewPayment.ShowDialog();
+            }
         }
     }
 }

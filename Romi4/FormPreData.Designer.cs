@@ -85,6 +85,8 @@
             this.bindingSourceBigPlan = new System.Windows.Forms.BindingSource(this.components);
             this.labelContractNum = new System.Windows.Forms.Label();
             this.textBoxContractNum = new System.Windows.Forms.TextBox();
+            this.checkBoxDiffPayment = new System.Windows.Forms.CheckBox();
+            this.labelDiffPaymentValue = new System.Windows.Forms.Label();
             this.groupBoxDescribe.SuspendLayout();
             this.groupBoxBuildingParams.SuspendLayout();
             this.groupBoxPlanParams.SuspendLayout();
@@ -376,6 +378,8 @@
             // 
             // groupBoxPlanParams
             // 
+            this.groupBoxPlanParams.Controls.Add(this.labelDiffPaymentValue);
+            this.groupBoxPlanParams.Controls.Add(this.checkBoxDiffPayment);
             this.groupBoxPlanParams.Controls.Add(this.buttonChangeRegPayPriceInFile);
             this.groupBoxPlanParams.Controls.Add(this.buttonCalcBigPlan);
             this.groupBoxPlanParams.Controls.Add(this.labelFirstPaymentUnit);
@@ -412,9 +416,9 @@
             // buttonCalcBigPlan
             // 
             this.buttonCalcBigPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonCalcBigPlan.Location = new System.Drawing.Point(238, 104);
+            this.buttonCalcBigPlan.Location = new System.Drawing.Point(377, 104);
             this.buttonCalcBigPlan.Name = "buttonCalcBigPlan";
-            this.buttonCalcBigPlan.Size = new System.Drawing.Size(252, 37);
+            this.buttonCalcBigPlan.Size = new System.Drawing.Size(142, 37);
             this.buttonCalcBigPlan.TabIndex = 28;
             this.buttonCalcBigPlan.Text = "Рассчитать план";
             this.buttonCalcBigPlan.UseVisualStyleBackColor = false;
@@ -628,6 +632,27 @@
             this.textBoxContractNum.Size = new System.Drawing.Size(60, 20);
             this.textBoxContractNum.TabIndex = 31;
             // 
+            // checkBoxDiffPayment
+            // 
+            this.checkBoxDiffPayment.AutoSize = true;
+            this.checkBoxDiffPayment.Location = new System.Drawing.Point(182, 115);
+            this.checkBoxDiffPayment.Name = "checkBoxDiffPayment";
+            this.checkBoxDiffPayment.Size = new System.Drawing.Size(186, 17);
+            this.checkBoxDiffPayment.TabIndex = 34;
+            this.checkBoxDiffPayment.Text = "Другой взнос после заселения";
+            this.checkBoxDiffPayment.UseVisualStyleBackColor = true;
+            this.checkBoxDiffPayment.CheckedChanged += new System.EventHandler(this.checkBoxDiffPayment_CheckedChanged);
+            // 
+            // labelDiffPaymentValue
+            // 
+            this.labelDiffPaymentValue.AutoSize = true;
+            this.labelDiffPaymentValue.Location = new System.Drawing.Point(182, 135);
+            this.labelDiffPaymentValue.Name = "labelDiffPaymentValue";
+            this.labelDiffPaymentValue.Size = new System.Drawing.Size(133, 13);
+            this.labelDiffPaymentValue.TabIndex = 35;
+            this.labelDiffPaymentValue.Text = "взнос_после_заселения";
+            this.labelDiffPaymentValue.Visible = false;
+            // 
             // FormPreData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,5 +749,7 @@
         private System.Windows.Forms.Button buttonChangeRegPayPriceInFile;
         private System.Windows.Forms.Label labelContractNum;
         private System.Windows.Forms.TextBox textBoxContractNum;
+        private System.Windows.Forms.CheckBox checkBoxDiffPayment;
+        private System.Windows.Forms.Label labelDiffPaymentValue;
     }
 }

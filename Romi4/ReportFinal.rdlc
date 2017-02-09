@@ -9,39 +9,39 @@
               <Width>0.92774cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.43122cm</Width>
+              <Width>1.60994cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.85156cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.90501cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97619cm</Width>
+              <Width>2.00966cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.95972cm</Width>
+              <Width>1.91761cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>1.53758cm</Width>
+              <Width>1.29992cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.23542cm</Width>
+              <Width>1.73223cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.94979cm</Width>
+              <Width>1.62527cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.97625cm</Width>
+              <Width>1.89307cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.05562cm</Width>
+              <Width>1.83854cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.10271cm</Height>
+              <Height>1.81708cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -54,6 +54,7 @@
                             <TextRun>
                               <Value>№</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -88,6 +89,7 @@
                             <TextRun>
                               <Value>Дата взноса</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -122,6 +124,7 @@
                             <TextRun>
                               <Value>Паевой взнос, кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -156,6 +159,7 @@
                             <TextRun>
                               <Value>Паевой взнос, уч.п.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -190,6 +194,7 @@
                             <TextRun>
                               <Value>Накопленная площадь, кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -224,6 +229,7 @@
                             <TextRun>
                               <Value>Невыкупл. остаток, кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -258,6 +264,7 @@
                             <TextRun>
                               <Value>Рейтинг</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -292,6 +299,7 @@
                             <TextRun>
                               <Value>Индив. рента, кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -326,6 +334,7 @@
                             <TextRun>
                               <Value>Взнос за влад. и польз., кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -360,6 +369,7 @@
                             <TextRun>
                               <Value>Итого платежей, кв.м.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -394,6 +404,7 @@
                             <TextRun>
                               <Value>Итого платежей, уч.п.</Value>
                               <Style>
+                                <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
@@ -420,7 +431,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.65292cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -432,7 +443,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!num.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -464,7 +477,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!currentDate.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -496,7 +511,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!paymentSqM.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -528,7 +545,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!paymentRegPays.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -560,7 +579,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!accumSquare.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -592,7 +613,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!restSquare.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -624,7 +647,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!rating.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -656,7 +681,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!indRent.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -688,7 +715,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!usingPayment.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -720,7 +749,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!monthlySummarySqM.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -752,7 +783,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>=Fields!monthlySummaryRegPays.Value</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -811,8 +844,9 @@
         <RepeatRowHeaders>true</RepeatRowHeaders>
         <DataSetName>DataSetTable1</DataSetName>
         <Top>16.41745cm</Top>
-        <Height>1.70271cm</Height>
-        <Width>27.04953cm</Width>
+        <Left>0.635cm</Left>
+        <Height>2.47cm</Height>
+        <Width>18.61054cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -840,7 +874,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox27</rd:DefaultName>
         <Top>2.52942cm</Top>
-        <Left>7.61683cm</Left>
+        <Left>5.39433cm</Left>
         <Height>1.02333cm</Height>
         <Width>8.94243cm</Width>
         <ZIndex>1</ZIndex>
@@ -872,7 +906,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>3.87111cm</Top>
-        <Left>0.90972cm</Left>
+        <Left>1.22722cm</Left>
         <Height>0.54708cm</Height>
         <Width>6.32547cm</Width>
         <ZIndex>2</ZIndex>
@@ -904,7 +938,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>4.45347cm</Top>
-        <Left>0.90971cm</Left>
+        <Left>1.22721cm</Left>
         <Height>0.62645cm</Height>
         <Width>2.9388cm</Width>
         <ZIndex>3</ZIndex>
@@ -936,7 +970,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>3.87111cm</Top>
-        <Left>0.34334cm</Left>
+        <Left>0.66084cm</Left>
         <Height>0.54708cm</Height>
         <Width>0.5311cm</Width>
         <ZIndex>4</ZIndex>
@@ -968,7 +1002,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>4.45347cm</Top>
-        <Left>10.41018cm</Left>
+        <Left>10.72768cm</Left>
         <Height>0.62645cm</Height>
         <Width>5.22954cm</Width>
         <ZIndex>5</ZIndex>
@@ -1006,7 +1040,7 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>4.4182cm</Top>
-        <Left>15.63972cm</Left>
+        <Left>15.95722cm</Left>
         <Height>0.62645cm</Height>
         <Width>2.93495cm</Width>
         <ZIndex>6</ZIndex>
@@ -1038,7 +1072,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>5.07992cm</Top>
-        <Left>0.90971cm</Left>
+        <Left>1.22721cm</Left>
         <Height>0.62645cm</Height>
         <Width>6.32548cm</Width>
         <ZIndex>7</ZIndex>
@@ -1076,7 +1110,7 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>5.07992cm</Top>
-        <Left>7.25537cm</Left>
+        <Left>7.57287cm</Left>
         <Height>0.62645cm</Height>
         <Width>3.66889cm</Width>
         <ZIndex>8</ZIndex>
@@ -1105,8 +1139,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>0.36724cm</Top>
-        <Left>23.51828cm</Left>
+        <Top>0.17639cm</Top>
+        <Left>15.70377cm</Left>
         <Height>0.57354cm</Height>
         <Width>3.05562cm</Width>
         <ZIndex>9</ZIndex>
@@ -1135,8 +1169,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox25</rd:DefaultName>
-        <Top>1.65543cm</Top>
-        <Left>23.51828cm</Left>
+        <Top>1.46458cm</Top>
+        <Left>15.70377cm</Left>
         <Height>0.6cm</Height>
         <Width>0.56854cm</Width>
         <ZIndex>10</ZIndex>
@@ -1165,8 +1199,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
-        <Top>1.65543cm</Top>
-        <Left>24.22793cm</Left>
+        <Top>1.46458cm</Top>
+        <Left>16.41342cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>11</ZIndex>
@@ -1198,7 +1232,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>5.70637cm</Top>
-        <Left>0.90972cm</Left>
+        <Left>1.22722cm</Left>
         <Height>0.62645cm</Height>
         <Width>5.7963cm</Width>
         <ZIndex>12</ZIndex>
@@ -1236,7 +1270,7 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>5.70637cm</Top>
-        <Left>6.7413cm</Left>
+        <Left>7.0588cm</Left>
         <Height>0.62645cm</Height>
         <Width>3.66889cm</Width>
         <ZIndex>13</ZIndex>
@@ -1268,7 +1302,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>6.33282cm</Top>
-        <Left>0.90971cm</Left>
+        <Left>1.22721cm</Left>
         <Height>0.62645cm</Height>
         <Width>5.7963cm</Width>
         <ZIndex>14</ZIndex>
@@ -1306,7 +1340,7 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>6.33282cm</Top>
-        <Left>6.74129cm</Left>
+        <Left>7.05879cm</Left>
         <Height>0.62645cm</Height>
         <Width>3.66889cm</Width>
         <ZIndex>15</ZIndex>
@@ -1338,7 +1372,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>5.70637cm</Top>
-        <Left>10.44546cm</Left>
+        <Left>10.76296cm</Left>
         <Height>0.62645cm</Height>
         <Width>6.45776cm</Width>
         <ZIndex>16</ZIndex>
@@ -1376,9 +1410,9 @@
         </Paragraphs>
         <rd:DefaultName>type</rd:DefaultName>
         <Top>5.70637cm</Top>
-        <Left>16.97377cm</Left>
+        <Left>17.32655cm</Left>
         <Height>0.62645cm</Height>
-        <Width>3.57188cm</Width>
+        <Width>1.77208cm</Width>
         <ZIndex>17</ZIndex>
         <Style>
           <Border>
@@ -1408,7 +1442,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>7.41071cm</Top>
-        <Left>0.90971cm</Left>
+        <Left>1.22721cm</Left>
         <Height>0.62645cm</Height>
         <Width>7.43672cm</Width>
         <ZIndex>18</ZIndex>
@@ -1850,7 +1884,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetTableDescribe</DataSetName>
         <Top>8.21355cm</Top>
-        <Left>0.34334cm</Left>
+        <Left>0.66084cm</Left>
         <Height>1.8cm</Height>
         <Width>15.06684cm</Width>
         <ZIndex>19</ZIndex>
@@ -1884,7 +1918,7 @@
         </Paragraphs>
         <rd:DefaultName>type1</rd:DefaultName>
         <Top>4.44465cm</Top>
-        <Left>4.04751cm</Left>
+        <Left>4.36501cm</Left>
         <Height>0.6cm</Height>
         <Width>3.70417cm</Width>
         <ZIndex>20</ZIndex>
@@ -1916,7 +1950,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>10.37404cm</Top>
-        <Left>0.90971cm</Left>
+        <Left>1.22721cm</Left>
         <Height>0.62645cm</Height>
         <Width>10.92922cm</Width>
         <ZIndex>21</ZIndex>
@@ -1948,7 +1982,7 @@
         </Paragraphs>
         <rd:DefaultName>ExecutionTime</rd:DefaultName>
         <Top>10.40049cm</Top>
-        <Left>12.15667cm</Left>
+        <Left>12.47417cm</Left>
         <Height>0.6cm</Height>
         <Width>2.5cm</Width>
         <ZIndex>22</ZIndex>
@@ -2332,7 +2366,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetTableSmallPlan</DataSetName>
         <Top>11.58558cm</Top>
-        <Left>0.34334cm</Left>
+        <Left>0.66084cm</Left>
         <Height>1.2cm</Height>
         <Width>17.72453cm</Width>
         <ZIndex>23</ZIndex>
@@ -2900,7 +2934,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSetTableDescribe</DataSetName>
         <Top>13.08133cm</Top>
-        <Left>0.34334cm</Left>
+        <Left>0.66084cm</Left>
         <Height>2.4cm</Height>
         <Width>17.22134cm</Width>
         <ZIndex>24</ZIndex>
@@ -2928,7 +2962,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>15.87037cm</Top>
-        <Left>1.33791cm</Left>
+        <Left>1.65541cm</Left>
         <Height>0.54708cm</Height>
         <Width>12.72134cm</Width>
         <ZIndex>25</ZIndex>
@@ -2960,7 +2994,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox29</rd:DefaultName>
         <Top>15.87037cm</Top>
-        <Left>0.34333cm</Left>
+        <Left>0.66083cm</Left>
         <Height>0.54708cm</Height>
         <Width>0.99459cm</Width>
         <ZIndex>26</ZIndex>
@@ -2991,8 +3025,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>18.8087cm</Top>
-        <Left>0.34334cm</Left>
+        <Top>20.3962cm</Top>
+        <Left>0.66084cm</Left>
         <Height>0.6cm</Height>
         <Width>2.74005cm</Width>
         <ZIndex>27</ZIndex>
@@ -3023,8 +3057,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>18.8087cm</Top>
-        <Left>7.39456cm</Left>
+        <Top>20.3962cm</Top>
+        <Left>7.71206cm</Left>
         <Height>0.6cm</Height>
         <Width>3.88912cm</Width>
         <ZIndex>28</ZIndex>
@@ -3051,7 +3085,7 @@
                 </Style>
               </TextRun>
               <TextRun>
-                <Value>Р.В. Красникова/</Value>
+                <Value>Р.В. Дайнеко/</Value>
                 <Style>
                   <FontWeight>Bold</FontWeight>
                   <TextDecoration>Underline</TextDecoration>
@@ -3062,8 +3096,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>19.77998cm</Top>
-        <Left>0.34333cm</Left>
+        <Top>21.36748cm</Top>
+        <Left>0.66083cm</Left>
         <Height>0.6cm</Height>
         <Width>5.94151cm</Width>
         <ZIndex>29</ZIndex>
@@ -3094,8 +3128,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>19.77998cm</Top>
-        <Left>7.39455cm</Left>
+        <Top>21.36748cm</Top>
+        <Left>7.71205cm</Left>
         <Height>0.6cm</Height>
         <Width>7.67013cm</Width>
         <ZIndex>30</ZIndex>
@@ -3126,8 +3160,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox22</rd:DefaultName>
-        <Top>20.85154cm</Top>
-        <Left>0.34334cm</Left>
+        <Top>22.43904cm</Top>
+        <Left>0.66084cm</Left>
         <Height>0.6cm</Height>
         <Width>0.99458cm</Width>
         <ZIndex>31</ZIndex>
@@ -3156,8 +3190,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox24</rd:DefaultName>
-        <Top>1.04661cm</Top>
-        <Left>23.51828cm</Left>
+        <Top>0.85576cm</Top>
+        <Left>15.70377cm</Left>
         <Height>0.57354cm</Height>
         <Width>2.42062cm</Width>
         <ZIndex>32</ZIndex>
@@ -3186,8 +3220,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>contractNum</rd:DefaultName>
-        <Top>1.0196cm</Top>
-        <Left>26.00946cm</Left>
+        <Top>0.82875cm</Top>
+        <Left>18.19495cm</Left>
         <Height>0.6cm</Height>
         <Width>0.90368cm</Width>
         <ZIndex>33</ZIndex>
@@ -3202,10 +3236,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>9.4985in</Height>
+    <Height>11.436in</Height>
     <Style />
   </Body>
-  <Width>11.2955in</Width>
+  <Width>7.86315in</Width>
   <Page>
     <PageHeader>
       <Height>0.84667cm</Height>
@@ -3227,8 +3261,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>PageNumber</rd:DefaultName>
-          <Top>0.14965cm</Top>
-          <Left>26.95787cm</Left>
+          <Top>0.18494cm</Top>
+          <Left>18.05856cm</Left>
           <Height>0.52062cm</Height>
           <Width>0.70083cm</Width>
           <Style>
@@ -3250,10 +3284,10 @@
     </PageHeader>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <LeftMargin>0.5cm</LeftMargin>
+    <RightMargin>0.5cm</RightMargin>
+    <TopMargin>0.5cm</TopMargin>
+    <BottomMargin>0.5cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
