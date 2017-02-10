@@ -27,7 +27,7 @@ namespace Romi4
             InitializeComponent();
             SetRegPayPriceFromFile();
             CalcSmallPlan();
-            CalcBigPlan();
+            //CalcBigPlan();
         }
 
         //Обработчики формы
@@ -145,7 +145,7 @@ namespace Romi4
                 //Привязка источника данных таблицы
                 bindingSourceSmallPlan.DataSource = smallTable;
                 dataGridViewSmallPlanParams.DataSource = bindingSourceSmallPlan;
-                dataGridViewSmallPlanParams.Height -= 5;
+                //dataGridViewSmallPlanParams.Height -= 5;
             }
             catch
             {
@@ -393,7 +393,7 @@ namespace Romi4
                 bindingSourceBigPlan.DataSource = bigTable;
                 dataGridViewBigPlan.DataSource = bindingSourceBigPlan;
 
-                dataGridViewBigPlan.Height = dataGridViewBigPlan.Rows.GetRowsHeight(DataGridViewElementStates.Visible) - 40;
+                dataGridViewBigPlan.Height = dataGridViewBigPlan.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 70;
                 for (int i = 0; i < dataGridViewBigPlan.Columns.Count; i++)
                 {
                     dataGridViewBigPlan.Columns[i].SortMode = DataGridViewColumnSortMode.NotSortable;

@@ -75,6 +75,7 @@
             this.textBoxRubles.Name = "textBoxRubles";
             this.textBoxRubles.Size = new System.Drawing.Size(64, 20);
             this.textBoxRubles.TabIndex = 3;
+            this.textBoxRubles.TextChanged += new System.EventHandler(this.textBoxRubles_TextChanged);
             // 
             // textBoxRegPays
             // 
@@ -83,6 +84,7 @@
             this.textBoxRegPays.Name = "textBoxRegPays";
             this.textBoxRegPays.Size = new System.Drawing.Size(64, 20);
             this.textBoxRegPays.TabIndex = 4;
+            this.textBoxRegPays.TextChanged += new System.EventHandler(this.textBoxRegPays_TextChanged);
             // 
             // buttonReject
             // 

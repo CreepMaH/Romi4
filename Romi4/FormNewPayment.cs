@@ -13,6 +13,7 @@ namespace Romi4
     {
         double regPayPrice;
 
+        //Обработчики формы
         public FormNewPayment(string exRegPayPrice)
         {
             InitializeComponent();
@@ -20,6 +21,14 @@ namespace Romi4
             regPayPrice = ParseStringToDouble(exRegPayPrice);
         }
 
+        private void FormNewPayment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            FormPreData formPreData = Owner as FormPreData;
+
+            if (DialogResult != DialogResult.OK) formPreData.checkBoxDiffPayment.Checked = false;
+        }
+
+        //Функции
         /// <summary>
         /// Преобразует строку в число формата "double" независимо от символа разделителя
         /// </summary>
@@ -51,6 +60,7 @@ namespace Romi4
             }
         }
 
+        //Обработчики событий
         private void radioButtonRubles_CheckedChanged(object sender, EventArgs e)
         {
             ChangeType();
@@ -85,7 +95,8 @@ namespace Romi4
 
                 FormPreData formPreData = Owner as FormPreData;
                 formPreData.SetDiffPayment(diffValue);
-                
+
+                DialogResult = DialogResult.OK;
                 Close();
             }
             catch
@@ -95,10 +106,14 @@ namespace Romi4
             }
         }
 
-        private void FormNewPayment_FormClosed(object sender, FormClosedEventArgs e)
+        private void textBoxRubles_TextChanged(object sender, EventArgs e)
         {
-            FormPreData formPreData = Owner as FormPreData;
-            formPreData.checkBoxDiffPayment.Checked = false;
+            textBoxRegPays.Text = (ParseStringToDouble(textBoxRubles.Text) / regPayPrice).ToString();
+        }
+
+        private void textBoxRegPays_TextChanged(object sender, EventArgs e)
+        {
+            textBoxRubles.Text = (ParseStringToDouble(textBoxRegPays.Text) * regPayPrice).ToString();
         }
     }
 }
