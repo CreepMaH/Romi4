@@ -87,6 +87,10 @@
             this.bindingSourceBigPlan = new System.Windows.Forms.BindingSource(this.components);
             this.labelContractNum = new System.Windows.Forms.Label();
             this.textBoxContractNum = new System.Windows.Forms.TextBox();
+            this.numericUpDownMinRating = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownMaxRating = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBoxDescribe.SuspendLayout();
             this.groupBoxBuildingParams.SuspendLayout();
             this.groupBoxPlanParams.SuspendLayout();
@@ -96,6 +100,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBigPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSmallPlan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBigPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinRating)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxRating)).BeginInit();
             this.SuspendLayout();
             // 
             // textBoxSquareRange
@@ -193,7 +199,7 @@
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(131, 56);
+            this.textBoxPrice.Location = new System.Drawing.Point(131, 50);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(60, 20);
             this.textBoxPrice.TabIndex = 8;
@@ -202,7 +208,7 @@
             // 
             // labelPrice
             // 
-            this.labelPrice.Location = new System.Drawing.Point(6, 54);
+            this.labelPrice.Location = new System.Drawing.Point(6, 48);
             this.labelPrice.Name = "labelPrice";
             this.labelPrice.Size = new System.Drawing.Size(109, 26);
             this.labelPrice.TabIndex = 2;
@@ -246,7 +252,8 @@
             // 
             // textBoxIncomePayment
             // 
-            this.textBoxIncomePayment.Location = new System.Drawing.Point(131, 108);
+            this.textBoxIncomePayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxIncomePayment.Location = new System.Drawing.Point(131, 102);
             this.textBoxIncomePayment.Name = "textBoxIncomePayment";
             this.textBoxIncomePayment.ReadOnly = true;
             this.textBoxIncomePayment.Size = new System.Drawing.Size(60, 20);
@@ -255,7 +262,7 @@
             // 
             // labelIncomePayment
             // 
-            this.labelIncomePayment.Location = new System.Drawing.Point(6, 105);
+            this.labelIncomePayment.Location = new System.Drawing.Point(6, 99);
             this.labelIncomePayment.Name = "labelIncomePayment";
             this.labelIncomePayment.Size = new System.Drawing.Size(119, 28);
             this.labelIncomePayment.TabIndex = 2;
@@ -320,7 +327,7 @@
             this.groupBoxBuildingParams.Controls.Add(this.labelSqMPriceUnit);
             this.groupBoxBuildingParams.Location = new System.Drawing.Point(12, 289);
             this.groupBoxBuildingParams.Name = "groupBoxBuildingParams";
-            this.groupBoxBuildingParams.Size = new System.Drawing.Size(258, 149);
+            this.groupBoxBuildingParams.Size = new System.Drawing.Size(258, 138);
             this.groupBoxBuildingParams.TabIndex = 13;
             this.groupBoxBuildingParams.TabStop = false;
             this.groupBoxBuildingParams.Text = "Параметры целевой недвижимости";
@@ -328,7 +335,7 @@
             // labelPriceUnit
             // 
             this.labelPriceUnit.AutoSize = true;
-            this.labelPriceUnit.Location = new System.Drawing.Point(197, 59);
+            this.labelPriceUnit.Location = new System.Drawing.Point(197, 53);
             this.labelPriceUnit.Name = "labelPriceUnit";
             this.labelPriceUnit.Size = new System.Drawing.Size(27, 13);
             this.labelPriceUnit.TabIndex = 15;
@@ -346,7 +353,7 @@
             // labelIncomePaymentUnit
             // 
             this.labelIncomePaymentUnit.AutoSize = true;
-            this.labelIncomePaymentUnit.Location = new System.Drawing.Point(197, 111);
+            this.labelIncomePaymentUnit.Location = new System.Drawing.Point(197, 105);
             this.labelIncomePaymentUnit.Name = "labelIncomePaymentUnit";
             this.labelIncomePaymentUnit.Size = new System.Drawing.Size(27, 13);
             this.labelIncomePaymentUnit.TabIndex = 21;
@@ -354,7 +361,8 @@
             // 
             // textBoxSqMPrice
             // 
-            this.textBoxSqMPrice.Location = new System.Drawing.Point(131, 82);
+            this.textBoxSqMPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.textBoxSqMPrice.Location = new System.Drawing.Point(131, 76);
             this.textBoxSqMPrice.Name = "textBoxSqMPrice";
             this.textBoxSqMPrice.ReadOnly = true;
             this.textBoxSqMPrice.Size = new System.Drawing.Size(60, 20);
@@ -363,7 +371,7 @@
             // 
             // labelSqMPrice
             // 
-            this.labelSqMPrice.Location = new System.Drawing.Point(6, 85);
+            this.labelSqMPrice.Location = new System.Drawing.Point(6, 79);
             this.labelSqMPrice.Name = "labelSqMPrice";
             this.labelSqMPrice.Size = new System.Drawing.Size(119, 29);
             this.labelSqMPrice.TabIndex = 17;
@@ -372,7 +380,7 @@
             // labelSqMPriceUnit
             // 
             this.labelSqMPriceUnit.AutoSize = true;
-            this.labelSqMPriceUnit.Location = new System.Drawing.Point(197, 85);
+            this.labelSqMPriceUnit.Location = new System.Drawing.Point(197, 79);
             this.labelSqMPriceUnit.Name = "labelSqMPriceUnit";
             this.labelSqMPriceUnit.Size = new System.Drawing.Size(61, 13);
             this.labelSqMPriceUnit.TabIndex = 19;
@@ -531,7 +539,7 @@
             this.labelDiffPaymentValue.AutoSize = true;
             this.labelDiffPaymentValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelDiffPaymentValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.labelDiffPaymentValue.Location = new System.Drawing.Point(745, 231);
+            this.labelDiffPaymentValue.Location = new System.Drawing.Point(787, 229);
             this.labelDiffPaymentValue.Name = "labelDiffPaymentValue";
             this.labelDiffPaymentValue.Size = new System.Drawing.Size(154, 13);
             this.labelDiffPaymentValue.TabIndex = 35;
@@ -541,7 +549,7 @@
             // checkBoxDiffPayment
             // 
             this.checkBoxDiffPayment.AutoSize = true;
-            this.checkBoxDiffPayment.Location = new System.Drawing.Point(745, 211);
+            this.checkBoxDiffPayment.Location = new System.Drawing.Point(787, 211);
             this.checkBoxDiffPayment.Name = "checkBoxDiffPayment";
             this.checkBoxDiffPayment.Size = new System.Drawing.Size(186, 17);
             this.checkBoxDiffPayment.TabIndex = 34;
@@ -552,7 +560,7 @@
             // buttonCalcBigPlan
             // 
             this.buttonCalcBigPlan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.buttonCalcBigPlan.Location = new System.Drawing.Point(296, 401);
+            this.buttonCalcBigPlan.Location = new System.Drawing.Point(349, 390);
             this.buttonCalcBigPlan.Name = "buttonCalcBigPlan";
             this.buttonCalcBigPlan.Size = new System.Drawing.Size(142, 37);
             this.buttonCalcBigPlan.TabIndex = 28;
@@ -564,13 +572,13 @@
             // 
             this.labelSettlementRating.Location = new System.Drawing.Point(558, 207);
             this.labelSettlementRating.Name = "labelSettlementRating";
-            this.labelSettlementRating.Size = new System.Drawing.Size(85, 31);
+            this.labelSettlementRating.Size = new System.Drawing.Size(136, 31);
             this.labelSettlementRating.TabIndex = 31;
-            this.labelSettlementRating.Text = "Заселение при рейтинге:";
+            this.labelSettlementRating.Text = "Рейтинг заселения (осмотрительный план):";
             // 
             // textBoxSettlementRating
             // 
-            this.textBoxSettlementRating.Location = new System.Drawing.Point(658, 210);
+            this.textBoxSettlementRating.Location = new System.Drawing.Point(700, 210);
             this.textBoxSettlementRating.Name = "textBoxSettlementRating";
             this.textBoxSettlementRating.Size = new System.Drawing.Size(60, 20);
             this.textBoxSettlementRating.TabIndex = 32;
@@ -585,7 +593,7 @@
             this.dataGridViewSmallPlanParams.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.dataGridViewSmallPlanParams.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridViewSmallPlanParams.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSmallPlanParams.Location = new System.Drawing.Point(18, 444);
+            this.dataGridViewSmallPlanParams.Location = new System.Drawing.Point(12, 439);
             this.dataGridViewSmallPlanParams.Name = "dataGridViewSmallPlanParams";
             this.dataGridViewSmallPlanParams.ReadOnly = true;
             this.dataGridViewSmallPlanParams.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
@@ -648,10 +656,83 @@
             // 
             // textBoxContractNum
             // 
-            this.textBoxContractNum.Location = new System.Drawing.Point(658, 49);
+            this.textBoxContractNum.Location = new System.Drawing.Point(700, 49);
             this.textBoxContractNum.Name = "textBoxContractNum";
             this.textBoxContractNum.Size = new System.Drawing.Size(60, 20);
             this.textBoxContractNum.TabIndex = 31;
+            // 
+            // numericUpDownMinRating
+            // 
+            this.numericUpDownMinRating.DecimalPlaces = 2;
+            this.numericUpDownMinRating.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownMinRating.Location = new System.Drawing.Point(700, 249);
+            this.numericUpDownMinRating.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownMinRating.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownMinRating.Name = "numericUpDownMinRating";
+            this.numericUpDownMinRating.Size = new System.Drawing.Size(60, 20);
+            this.numericUpDownMinRating.TabIndex = 36;
+            this.numericUpDownMinRating.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            // 
+            // numericUpDownMaxRating
+            // 
+            this.numericUpDownMaxRating.DecimalPlaces = 2;
+            this.numericUpDownMaxRating.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            131072});
+            this.numericUpDownMaxRating.Location = new System.Drawing.Point(787, 249);
+            this.numericUpDownMaxRating.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDownMaxRating.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.numericUpDownMaxRating.Name = "numericUpDownMaxRating";
+            this.numericUpDownMaxRating.Size = new System.Drawing.Size(60, 20);
+            this.numericUpDownMaxRating.TabIndex = 37;
+            this.numericUpDownMaxRating.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(558, 245);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(135, 31);
+            this.label1.TabIndex = 38;
+            this.label1.Text = "Диапазон рейтинга (реалистичный план):";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(767, 251);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "--";
             // 
             // FormPreData
             // 
@@ -660,6 +741,10 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1300, 592);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.numericUpDownMaxRating);
+            this.Controls.Add(this.numericUpDownMinRating);
             this.Controls.Add(this.labelDiffPaymentValue);
             this.Controls.Add(this.buttonCalcBigPlan);
             this.Controls.Add(this.textBoxContractNum);
@@ -693,6 +778,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBigPlan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceSmallPlan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceBigPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinRating)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxRating)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -758,5 +845,9 @@
         private System.Windows.Forms.TextBox textBoxContractNum;
         private System.Windows.Forms.Label labelDiffPaymentValue;
         public System.Windows.Forms.CheckBox checkBoxDiffPayment;
+        private System.Windows.Forms.NumericUpDown numericUpDownMinRating;
+        private System.Windows.Forms.NumericUpDown numericUpDownMaxRating;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

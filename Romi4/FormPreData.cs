@@ -14,13 +14,14 @@ namespace Romi4
     {
         //Переменные временных показателей накопления. Присваиваются в CalcBigPlan() и используются
         //при выводе на печать
-        string fullTime;
-        string accumTime;
-        string buyoutTime;
-        string incomeTime;
-        string settlementPayment;
+        string fullTime;            //Полное время выкупа
+        string accumTime;           //Время накопления по осмотрительному плану
+        string buyoutTime;          //Время выкупа по осмотрительному плану
+        string incomeTimeMin;       //Минимальное время заселения по реалистичному плану
+        string incomeTimeMax;       //Максимальное время заселения по реалистичному плану
 
-        double diffPayment;     //Значение платежа после заселения
+        string settlementPayment;   //Вступительный взнос при заселении
+        double diffPayment;         //Значение платежа после заселения
 
         public FormPreData()
         {
@@ -227,7 +228,8 @@ namespace Romi4
                 AddRowToTable(bigTable, num, paymentSqM, paymentRegPays, accumSquare, restSquare, rating, indRent, usingPayment, monthlySummarySqM, monthlySummaryRegPays);
 
                 //От второй строки и до заселения
-                bool incTimeAdded = false;      //Индикатор присвоения значения переменной incomeTime (время заселения по реалистичному плану)
+                bool incTimeMinAdded = false;      //Индикатор присвоения значения переменной incomeTimeMin (минимальное время заселения по реалистичному плану)
+                bool incTimeMaxAdded = false;      //Индикатор присвоения значения переменной incomeTimeMax (максимальное время заселения по реалистичному плану)
 
                 while (rating < ParseStringToDouble(textBoxSettlementRating.Text))
                 {
@@ -243,11 +245,17 @@ namespace Romi4
                     indRent = accumSquare * 0.015 / 12;
                     rating = CalcRating(arrAccum, restSquare, indRent, monthlyPaymentSqM);
 
-                    //Время заселения по реалистичному плану (на печать)
-                    if ((rating > 0.1) && (!incTimeAdded))
+                    //Минимальное время заселения по реалистичному плану (на печать)
+                    if ((rating > Convert.ToDouble(numericUpDownMinRating.Value)) && (!incTimeMinAdded))
                     {
-                        incomeTime = num.ToString();
-                        incTimeAdded = true;
+                        incomeTimeMin = num.ToString();
+                        incTimeMinAdded = true;
+                    }
+                    //Максимальное время заселения по реалистичному плану (на печать)
+                    if ((rating > Convert.ToDouble(numericUpDownMaxRating.Value)) && (!incTimeMaxAdded))
+                    {
+                        incomeTimeMax = num.ToString();
+                        incTimeMaxAdded = true;
                     }
 
                     arrRating.Add(rating);
@@ -259,7 +267,7 @@ namespace Romi4
                 }
 
                 //Время накопления по осмотрительному плану (на печать)
-                accumTime = num.ToString();
+                accumTime = (num - 1).ToString();
 
                 //Первая строка после заселения
                 settlPaymentNum = arrRest.Last() * 0.05;
@@ -653,7 +661,8 @@ namespace Romi4
             listDescribe.Add(fullTime);
             listDescribe.Add(accumTime);
             listDescribe.Add(buyoutTime);
-            listDescribe.Add(incomeTime);
+            listDescribe.Add(incomeTimeMin);
+            listDescribe.Add(incomeTimeMax);
             listDescribe.Add(textBoxContractNum.Text);
 
             Form fTest = new FormTestReport(bigTable, smallTable, listDescribe);

@@ -1081,7 +1081,9 @@ namespace Romi4 {
             
             private global::System.Data.DataColumn columnbuyoutTime;
             
-            private global::System.Data.DataColumn columnincomeTime;
+            private global::System.Data.DataColumn columnincomeTimeMin;
+            
+            private global::System.Data.DataColumn columnincomeTimeMax;
             
             private global::System.Data.DataColumn columncontractNum;
             
@@ -1216,9 +1218,17 @@ namespace Romi4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn incomeTimeColumn {
+            public global::System.Data.DataColumn incomeTimeMinColumn {
                 get {
-                    return this.columnincomeTime;
+                    return this.columnincomeTimeMin;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn incomeTimeMaxColumn {
+                get {
+                    return this.columnincomeTimeMax;
                 }
             }
             
@@ -1267,7 +1277,7 @@ namespace Romi4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public tableDescribeRow AddtableDescribeRow(string type, string city, string street, string roomsNum, string squareRange, string buildingDescribe, string square, string price, string sqMPrice, string fullTime, string accumTime, string buyoutTime, string incomeTime, string contractNum) {
+            public tableDescribeRow AddtableDescribeRow(string type, string city, string street, string roomsNum, string squareRange, string buildingDescribe, string square, string price, string sqMPrice, string fullTime, string accumTime, string buyoutTime, string incomeTimeMin, string incomeTimeMax, string contractNum) {
                 tableDescribeRow rowtableDescribeRow = ((tableDescribeRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         type,
@@ -1282,7 +1292,8 @@ namespace Romi4 {
                         fullTime,
                         accumTime,
                         buyoutTime,
-                        incomeTime,
+                        incomeTimeMin,
+                        incomeTimeMax,
                         contractNum};
                 rowtableDescribeRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtableDescribeRow);
@@ -1318,7 +1329,8 @@ namespace Romi4 {
                 this.columnfullTime = base.Columns["fullTime"];
                 this.columnaccumTime = base.Columns["accumTime"];
                 this.columnbuyoutTime = base.Columns["buyoutTime"];
-                this.columnincomeTime = base.Columns["incomeTime"];
+                this.columnincomeTimeMin = base.Columns["incomeTimeMin"];
+                this.columnincomeTimeMax = base.Columns["incomeTimeMax"];
                 this.columncontractNum = base.Columns["contractNum"];
             }
             
@@ -1349,8 +1361,10 @@ namespace Romi4 {
                 base.Columns.Add(this.columnaccumTime);
                 this.columnbuyoutTime = new global::System.Data.DataColumn("buyoutTime", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnbuyoutTime);
-                this.columnincomeTime = new global::System.Data.DataColumn("incomeTime", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnincomeTime);
+                this.columnincomeTimeMin = new global::System.Data.DataColumn("incomeTimeMin", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnincomeTimeMin);
+                this.columnincomeTimeMax = new global::System.Data.DataColumn("incomeTimeMax", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnincomeTimeMax);
                 this.columncontractNum = new global::System.Data.DataColumn("contractNum", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncontractNum);
                 this.columntype.AllowDBNull = false;
@@ -1366,7 +1380,8 @@ namespace Romi4 {
                 this.columnfullTime.MaxLength = 255;
                 this.columnaccumTime.MaxLength = 255;
                 this.columnbuyoutTime.MaxLength = 255;
-                this.columnincomeTime.MaxLength = 255;
+                this.columnincomeTimeMin.MaxLength = 255;
+                this.columnincomeTimeMax.MaxLength = 255;
                 this.columncontractNum.MaxLength = 255;
             }
             
@@ -2141,17 +2156,33 @@ namespace Romi4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string incomeTime {
+            public string incomeTimeMin {
                 get {
                     try {
-                        return ((string)(this[this.tabletableDescribe.incomeTimeColumn]));
+                        return ((string)(this[this.tabletableDescribe.incomeTimeMinColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'incomeTime\' в таблице \'tableDescribe\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'incomeTimeMin\' в таблице \'tableDescribe\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tabletableDescribe.incomeTimeColumn] = value;
+                    this[this.tabletableDescribe.incomeTimeMinColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string incomeTimeMax {
+                get {
+                    try {
+                        return ((string)(this[this.tabletableDescribe.incomeTimeMaxColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'incomeTimeMax\' в таблице \'tableDescribe\' равно DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletableDescribe.incomeTimeMaxColumn] = value;
                 }
             }
             
@@ -2305,14 +2336,26 @@ namespace Romi4 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsincomeTimeNull() {
-                return this.IsNull(this.tabletableDescribe.incomeTimeColumn);
+            public bool IsincomeTimeMinNull() {
+                return this.IsNull(this.tabletableDescribe.incomeTimeMinColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetincomeTimeNull() {
-                this[this.tabletableDescribe.incomeTimeColumn] = global::System.Convert.DBNull;
+            public void SetincomeTimeMinNull() {
+                this[this.tabletableDescribe.incomeTimeMinColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsincomeTimeMaxNull() {
+                return this.IsNull(this.tabletableDescribe.incomeTimeMaxColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetincomeTimeMaxNull() {
+                this[this.tabletableDescribe.incomeTimeMaxColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3682,12 +3725,13 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("fullTime", "fullTime");
             tableMapping.ColumnMappings.Add("accumTime", "accumTime");
             tableMapping.ColumnMappings.Add("buyoutTime", "buyoutTime");
-            tableMapping.ColumnMappings.Add("incomeTime", "incomeTime");
+            tableMapping.ColumnMappings.Add("incomeTimeMin", "incomeTimeMin");
+            tableMapping.ColumnMappings.Add("incomeTimeMax", "incomeTimeMax");
             tableMapping.ColumnMappings.Add("contractNum", "contractNum");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tableDescribe` WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `sqMPrice` IS NULL) OR (`sqMPrice` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTime` IS NULL) OR (`incomeTime` = ?)) AND ((? = 1 AND `contractNum` IS NULL) OR (`contractNum` = ?)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `tableDescribe` WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `sqMPrice` IS NULL) OR (`sqMPrice` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTimeMin` IS NULL) OR (`incomeTimeMin` = ?)) AND ((? = 1 AND `incomeTimeMax` IS NULL) OR (`incomeTimeMax` = ?)) AND ((? = 1 AND `contractNum` IS NULL) OR (`contractNum` = ?)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_city", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "city", global::System.Data.DataRowVersion.Original, true, null));
@@ -3712,16 +3756,15 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_accumTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "accumTime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_buyoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_buyoutTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTimeMin", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTimeMin", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTimeMax", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTimeMax", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_contractNum", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_contractNum", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tableDescribe` (`type`, `city`, `street`, `roomsNum`, `squareRange`," +
-                " `buildingDescribe`, `square`, `price`, `sqMPrice`, `fullTime`, `accumTime`, `bu" +
-                "youtTime`, `incomeTime`, `contractNum`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?," +
-                " ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `tableDescribe` (`type`, `city`, `street`, `roomsNum`, `squareRange`, `buildingDescribe`, `square`, `price`, `sqMPrice`, `fullTime`, `accumTime`, `buyoutTime`, `incomeTimeMin`, `incomeTimeMax`, `contractNum`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("city", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "city", global::System.Data.DataRowVersion.Current, false, null));
@@ -3735,11 +3778,12 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fullTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullTime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("accumTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "accumTime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("buyoutTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTimeMin", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTimeMax", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("contractNum", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `tableDescribe` SET `type` = ?, `city` = ?, `street` = ?, `roomsNum` = ?, `squareRange` = ?, `buildingDescribe` = ?, `square` = ?, `price` = ?, `sqMPrice` = ?, `fullTime` = ?, `accumTime` = ?, `buyoutTime` = ?, `incomeTime` = ?, `contractNum` = ? WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `sqMPrice` IS NULL) OR (`sqMPrice` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTime` IS NULL) OR (`incomeTime` = ?)) AND ((? = 1 AND `contractNum` IS NULL) OR (`contractNum` = ?)))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `tableDescribe` SET `type` = ?, `city` = ?, `street` = ?, `roomsNum` = ?, `squareRange` = ?, `buildingDescribe` = ?, `square` = ?, `price` = ?, `sqMPrice` = ?, `fullTime` = ?, `accumTime` = ?, `buyoutTime` = ?, `incomeTimeMin` = ?, `incomeTimeMax` = ?, `contractNum` = ? WHERE ((`type` = ?) AND ((? = 1 AND `city` IS NULL) OR (`city` = ?)) AND ((? = 1 AND `street` IS NULL) OR (`street` = ?)) AND ((? = 1 AND `roomsNum` IS NULL) OR (`roomsNum` = ?)) AND ((? = 1 AND `squareRange` IS NULL) OR (`squareRange` = ?)) AND ((? = 1 AND `buildingDescribe` IS NULL) OR (`buildingDescribe` = ?)) AND ((? = 1 AND `square` IS NULL) OR (`square` = ?)) AND ((? = 1 AND `price` IS NULL) OR (`price` = ?)) AND ((? = 1 AND `sqMPrice` IS NULL) OR (`sqMPrice` = ?)) AND ((? = 1 AND `fullTime` IS NULL) OR (`fullTime` = ?)) AND ((? = 1 AND `accumTime` IS NULL) OR (`accumTime` = ?)) AND ((? = 1 AND `buyoutTime` IS NULL) OR (`buyoutTime` = ?)) AND ((? = 1 AND `incomeTimeMin` IS NULL) OR (`incomeTimeMin` = ?)) AND ((? = 1 AND `incomeTimeMax` IS NULL) OR (`incomeTimeMax` = ?)) AND ((? = 1 AND `contractNum` IS NULL) OR (`contractNum` = ?)))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("city", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "city", global::System.Data.DataRowVersion.Current, false, null));
@@ -3753,7 +3797,8 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("fullTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "fullTime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("accumTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "accumTime", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("buyoutTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTimeMin", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("incomeTimeMax", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("contractNum", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Current, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_type", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "type", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_city", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "city", global::System.Data.DataRowVersion.Original, true, null));
@@ -3778,8 +3823,10 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_accumTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "accumTime", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_buyoutTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_buyoutTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "buyoutTime", global::System.Data.DataRowVersion.Original, false, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTime", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Original, true, null));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTime", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTime", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTimeMin", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTimeMin", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMin", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_incomeTimeMax", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_incomeTimeMax", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "incomeTimeMax", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_contractNum", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Original, true, null));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_contractNum", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "contractNum", global::System.Data.DataRowVersion.Original, false, null));
         }
@@ -3798,8 +3845,8 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT type, city, street, roomsNum, squareRange, buildingDescribe, square, price" +
-                ", sqMPrice, fullTime, accumTime, buyoutTime, incomeTime, contractNum FROM tableD" +
-                "escribe";
+                ", sqMPrice, fullTime, accumTime, buyoutTime, incomeTimeMin, incomeTimeMax, contr" +
+                "actNum FROM tableDescribe";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3860,7 +3907,7 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(string Original_type, string Original_city, string Original_street, string Original_roomsNum, string Original_squareRange, string Original_buildingDescribe, string Original_square, string Original_price, string Original_sqMPrice, string Original_fullTime, string Original_accumTime, string Original_buyoutTime, string Original_incomeTime, string Original_contractNum) {
+        public virtual int Delete(string Original_type, string Original_city, string Original_street, string Original_roomsNum, string Original_squareRange, string Original_buildingDescribe, string Original_square, string Original_price, string Original_sqMPrice, string Original_fullTime, string Original_accumTime, string Original_buyoutTime, string Original_incomeTimeMin, string Original_incomeTimeMax, string Original_contractNum) {
             if ((Original_type == null)) {
                 this.Adapter.DeleteCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -3955,21 +4002,29 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_buyoutTime));
             }
-            if ((Original_incomeTime == null)) {
+            if ((Original_incomeTimeMin == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[24].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_incomeTime));
+                this.Adapter.DeleteCommand.Parameters[24].Value = ((string)(Original_incomeTimeMin));
             }
-            if ((Original_contractNum == null)) {
+            if ((Original_incomeTimeMax == null)) {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[26].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_contractNum));
+                this.Adapter.DeleteCommand.Parameters[26].Value = ((string)(Original_incomeTimeMax));
+            }
+            if ((Original_contractNum == null)) {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[28].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[27].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[28].Value = ((string)(Original_contractNum));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -3991,7 +4046,7 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string type, string city, string street, string roomsNum, string squareRange, string buildingDescribe, string square, string price, string sqMPrice, string fullTime, string accumTime, string buyoutTime, string incomeTime, string contractNum) {
+        public virtual int Insert(string type, string city, string street, string roomsNum, string squareRange, string buildingDescribe, string square, string price, string sqMPrice, string fullTime, string accumTime, string buyoutTime, string incomeTimeMin, string incomeTimeMax, string contractNum) {
             if ((type == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -4064,17 +4119,23 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[11].Value = ((string)(buyoutTime));
             }
-            if ((incomeTime == null)) {
+            if ((incomeTimeMin == null)) {
                 this.Adapter.InsertCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(incomeTime));
+                this.Adapter.InsertCommand.Parameters[12].Value = ((string)(incomeTimeMin));
             }
-            if ((contractNum == null)) {
+            if ((incomeTimeMax == null)) {
                 this.Adapter.InsertCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(contractNum));
+                this.Adapter.InsertCommand.Parameters[13].Value = ((string)(incomeTimeMax));
+            }
+            if ((contractNum == null)) {
+                this.Adapter.InsertCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[14].Value = ((string)(contractNum));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -4109,7 +4170,8 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
                     string fullTime, 
                     string accumTime, 
                     string buyoutTime, 
-                    string incomeTime, 
+                    string incomeTimeMin, 
+                    string incomeTimeMax, 
                     string contractNum, 
                     string Original_type, 
                     string Original_city, 
@@ -4123,7 +4185,8 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
                     string Original_fullTime, 
                     string Original_accumTime, 
                     string Original_buyoutTime, 
-                    string Original_incomeTime, 
+                    string Original_incomeTimeMin, 
+                    string Original_incomeTimeMax, 
                     string Original_contractNum) {
             if ((type == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -4197,127 +4260,141 @@ namespace Romi4.ReportBigPlanDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(buyoutTime));
             }
-            if ((incomeTime == null)) {
+            if ((incomeTimeMin == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(incomeTime));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(incomeTimeMin));
             }
-            if ((contractNum == null)) {
+            if ((incomeTimeMax == null)) {
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(contractNum));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(incomeTimeMax));
             }
-            if ((Original_type == null)) {
+            if ((contractNum == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_type));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(contractNum));
+            }
+            if ((Original_type == null)) {
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_type));
             }
             if ((Original_city == null)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_city));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_city));
             }
             if ((Original_street == null)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_street));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_street));
             }
             if ((Original_roomsNum == null)) {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[20].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_roomsNum));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_roomsNum));
             }
             if ((Original_squareRange == null)) {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[22].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_squareRange));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_squareRange));
             }
             if ((Original_buildingDescribe == null)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((string)(Original_buildingDescribe));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_buildingDescribe));
             }
             if ((Original_square == null)) {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[26].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_square));
+                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_square));
             }
             if ((Original_price == null)) {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[28].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((string)(Original_price));
+                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[29].Value = ((string)(Original_price));
             }
             if ((Original_sqMPrice == null)) {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[30].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[31].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[30].Value = ((string)(Original_sqMPrice));
+                this.Adapter.UpdateCommand.Parameters[30].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[31].Value = ((string)(Original_sqMPrice));
             }
             if ((Original_fullTime == null)) {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[32].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[33].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_fullTime));
+                this.Adapter.UpdateCommand.Parameters[32].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((string)(Original_fullTime));
             }
             if ((Original_accumTime == null)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[35].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_accumTime));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[35].Value = ((string)(Original_accumTime));
             }
             if ((Original_buyoutTime == null)) {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[36].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[37].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[36].Value = ((string)(Original_buyoutTime));
+                this.Adapter.UpdateCommand.Parameters[36].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[37].Value = ((string)(Original_buyoutTime));
             }
-            if ((Original_incomeTime == null)) {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[38].Value = global::System.DBNull.Value;
+            if ((Original_incomeTimeMin == null)) {
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[39].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[37].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[38].Value = ((string)(Original_incomeTime));
+                this.Adapter.UpdateCommand.Parameters[38].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[39].Value = ((string)(Original_incomeTimeMin));
+            }
+            if ((Original_incomeTimeMax == null)) {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[41].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[40].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[41].Value = ((string)(Original_incomeTimeMax));
             }
             if ((Original_contractNum == null)) {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[40].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[43].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[39].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[40].Value = ((string)(Original_contractNum));
+                this.Adapter.UpdateCommand.Parameters[42].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[43].Value = ((string)(Original_contractNum));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 

@@ -846,7 +846,7 @@
         <Top>16.41745cm</Top>
         <Left>0.635cm</Left>
         <Height>2.47cm</Height>
-        <Width>18.75646cm</Width>
+        <Width>18.75647cm</Width>
         <Style>
           <Border>
             <Style>Solid</Style>
@@ -2879,21 +2879,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="incomeTime">
+                    <Textbox Name="incomeTimeMin">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!incomeTime.Value</Value>
+                              <Value>=Fields!incomeTimeMin.Value + " - " + Fields!incomeTimeMax.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>incomeTime</rd:DefaultName>
+                      <rd:DefaultName>incomeTimeMin</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -3506,8 +3506,12 @@
           <DataField>buyoutTime</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="incomeTime">
-          <DataField>incomeTime</DataField>
+        <Field Name="incomeTimeMin">
+          <DataField>incomeTimeMin</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="incomeTimeMax">
+          <DataField>incomeTimeMax</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="contractNum">

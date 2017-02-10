@@ -44,7 +44,8 @@ namespace Romi4
             //Заполнение таблицы шапки в БД
             tableDescribeTableAdapter.Insert(listDescribe[0], listDescribe[1], listDescribe[2], listDescribe[3],
                  listDescribe[4], listDescribe[5], listDescribe[6], listDescribe[7], listDescribe[8], 
-                 listDescribe[9], listDescribe[10], listDescribe[11], listDescribe[12], listDescribe[13]);
+                 listDescribe[9], listDescribe[10], listDescribe[11], listDescribe[12], listDescribe[13], 
+                 listDescribe[14]);
 
             table1TableAdapter.Fill(ReportBigPlanDataSet.table1);
             tableDescribeTableAdapter.Fill(ReportBigPlanDataSet.tableDescribe);
@@ -73,7 +74,7 @@ namespace Romi4
             {
                 tableDescribeTableAdapter.Delete(dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(),
                     dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString(), dr[8].ToString(), dr[9].ToString(),
-                    dr[10].ToString(), dr[11].ToString(), dr[12].ToString(), dr[13].ToString());
+                    dr[10].ToString(), dr[11].ToString(), dr[12].ToString(), dr[13].ToString(), dr[14].ToString());
             }
 
             Cursor.Current = Cursors.Arrow;
