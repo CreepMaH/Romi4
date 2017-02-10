@@ -263,6 +263,7 @@
             // 
             // groupBoxDescribe
             // 
+            this.groupBoxDescribe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(201)))), ((int)(((byte)(251)))));
             this.groupBoxDescribe.Controls.Add(this.labelSquareRangeUnit);
             this.groupBoxDescribe.Controls.Add(this.labelRoomsNumUnit);
             this.groupBoxDescribe.Controls.Add(this.textBoxName);
@@ -304,6 +305,7 @@
             // 
             // groupBoxBuildingParams
             // 
+            this.groupBoxBuildingParams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBoxBuildingParams.Controls.Add(this.labelPriceUnit);
             this.groupBoxBuildingParams.Controls.Add(this.labelSquareUnit);
             this.groupBoxBuildingParams.Controls.Add(this.textBoxSquare);
@@ -378,6 +380,7 @@
             // 
             // groupBoxPlanParams
             // 
+            this.groupBoxPlanParams.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.groupBoxPlanParams.Controls.Add(this.buttonChangeRegPayPriceInFile);
             this.groupBoxPlanParams.Controls.Add(this.labelFirstPaymentUnit);
             this.groupBoxPlanParams.Controls.Add(this.labelFirstPayment);
@@ -387,6 +390,7 @@
             this.groupBoxPlanParams.Controls.Add(this.textBoxRegPayPrice);
             this.groupBoxPlanParams.Controls.Add(this.labelMonthlyPaymentRegPays);
             this.groupBoxPlanParams.Controls.Add(this.panel1);
+            this.groupBoxPlanParams.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBoxPlanParams.Location = new System.Drawing.Point(12, 182);
             this.groupBoxPlanParams.Name = "groupBoxPlanParams";
             this.groupBoxPlanParams.Size = new System.Drawing.Size(531, 101);
@@ -444,7 +448,7 @@
             // 
             // labelMonthlyPaymentRegPays
             // 
-            this.labelMonthlyPaymentRegPays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.labelMonthlyPaymentRegPays.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelMonthlyPaymentRegPays.Location = new System.Drawing.Point(6, 65);
             this.labelMonthlyPaymentRegPays.Name = "labelMonthlyPaymentRegPays";
             this.labelMonthlyPaymentRegPays.Size = new System.Drawing.Size(106, 29);
@@ -453,7 +457,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.textBoxMonthlyPaymentRegPays);
             this.panel1.Controls.Add(this.labelMonthlyPaymentRegPaysUnit);
@@ -478,7 +482,7 @@
             // labelMonthlyPaymentRegPaysUnit
             // 
             this.labelMonthlyPaymentRegPaysUnit.AutoSize = true;
-            this.labelMonthlyPaymentRegPaysUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.labelMonthlyPaymentRegPaysUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelMonthlyPaymentRegPaysUnit.Location = new System.Drawing.Point(441, 10);
             this.labelMonthlyPaymentRegPaysUnit.Name = "labelMonthlyPaymentRegPaysUnit";
             this.labelMonthlyPaymentRegPaysUnit.Size = new System.Drawing.Size(47, 13);
@@ -497,7 +501,7 @@
             // labelMonthlyPaymentRubles
             // 
             this.labelMonthlyPaymentRubles.AutoSize = true;
-            this.labelMonthlyPaymentRubles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.labelMonthlyPaymentRubles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelMonthlyPaymentRubles.Location = new System.Drawing.Point(180, 10);
             this.labelMonthlyPaymentRubles.Name = "labelMonthlyPaymentRubles";
             this.labelMonthlyPaymentRubles.Size = new System.Drawing.Size(27, 13);
@@ -515,7 +519,7 @@
             // labelMonthlyPaymentSqM
             // 
             this.labelMonthlyPaymentSqM.AutoSize = true;
-            this.labelMonthlyPaymentSqM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.labelMonthlyPaymentSqM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.labelMonthlyPaymentSqM.Location = new System.Drawing.Point(302, 10);
             this.labelMonthlyPaymentSqM.Name = "labelMonthlyPaymentSqM";
             this.labelMonthlyPaymentSqM.Size = new System.Drawing.Size(36, 13);
@@ -525,9 +529,11 @@
             // labelDiffPaymentValue
             // 
             this.labelDiffPaymentValue.AutoSize = true;
+            this.labelDiffPaymentValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelDiffPaymentValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.labelDiffPaymentValue.Location = new System.Drawing.Point(745, 231);
             this.labelDiffPaymentValue.Name = "labelDiffPaymentValue";
-            this.labelDiffPaymentValue.Size = new System.Drawing.Size(133, 13);
+            this.labelDiffPaymentValue.Size = new System.Drawing.Size(154, 13);
             this.labelDiffPaymentValue.TabIndex = 35;
             this.labelDiffPaymentValue.Text = "взнос_после_заселения";
             this.labelDiffPaymentValue.Visible = false;

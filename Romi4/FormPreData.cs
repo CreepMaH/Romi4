@@ -682,7 +682,11 @@ namespace Romi4
                 Form formNewPayment = new FormNewPayment(textBoxRegPayPrice.Text);
                 formNewPayment.Owner = this;
                 formNewPayment.ShowDialog();
+
+                labelDiffPaymentValue.Text = "Новый взнос: " + diffPayment.ToString("0.0000") + " уч.п.";
+                labelDiffPaymentValue.Visible = true;
             }
+            else labelDiffPaymentValue.Visible = false;
         }
     }
 }
