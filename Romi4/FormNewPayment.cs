@@ -14,12 +14,12 @@ namespace Romi4
         double regPayPrice;
         bool type;
 
-        //Обработчики формы
         /// <summary>
         /// Конструктор формы изменения платежа
         /// </summary>
         /// <param name="regPayPrice">Стоимость учётного пая</param>
-        /// <param name="type">Тип события: True - изменение ежемесячного платежа, False - изменение платежа после заселения</param>
+        /// <param name="type">Тип события: True - изменение ежемесячного платежа, 
+        /// False - изменение платежа после заселения</param>
         public FormNewPayment(string regPayPrice, bool type)
         {
             InitializeComponent();
@@ -39,6 +39,11 @@ namespace Romi4
             InitToolTips();
         }
 
+        //Обработчики формы
+        private void FormNewPayment_Load(object sender, EventArgs e)
+        {
+            textBoxRegPays.Focus();
+        }
         private void FormNewPayment_FormClosed(object sender, FormClosedEventArgs e)
         {
             FormPreData formPreData = Owner as FormPreData;
@@ -159,6 +164,7 @@ namespace Romi4
             try
             {
                 textBoxRegPays.Text = (ParseStringToDouble(textBoxRubles.Text) / regPayPrice).ToString();
+                textBoxRegPays.SelectionStart = textBoxRegPays.Text.Length;
             }
             catch
             {

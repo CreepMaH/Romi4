@@ -206,7 +206,7 @@
             this.textBoxPrice.Location = new System.Drawing.Point(131, 50);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(60, 20);
-            this.textBoxPrice.TabIndex = 16;
+            this.textBoxPrice.TabIndex = 2;
             this.textBoxPrice.Text = "56000";
             this.textBoxPrice.TextChanged += new System.EventHandler(this.textBoxPrice_TextChanged);
             // 
@@ -223,7 +223,7 @@
             this.textBoxSquare.Location = new System.Drawing.Point(131, 22);
             this.textBoxSquare.Name = "textBoxSquare";
             this.textBoxSquare.Size = new System.Drawing.Size(60, 20);
-            this.textBoxSquare.TabIndex = 15;
+            this.textBoxSquare.TabIndex = 1;
             this.textBoxSquare.Text = "54";
             this.textBoxSquare.TextChanged += new System.EventHandler(this.textBoxSquare_TextChanged);
             // 
@@ -240,7 +240,7 @@
             this.textBoxRegPayPrice.Location = new System.Drawing.Point(116, 28);
             this.textBoxRegPayPrice.Name = "textBoxRegPayPrice";
             this.textBoxRegPayPrice.Size = new System.Drawing.Size(60, 20);
-            this.textBoxRegPayPrice.TabIndex = 7;
+            this.textBoxRegPayPrice.TabIndex = 1;
             this.textBoxRegPayPrice.Text = "1239,1";
             this.textBoxRegPayPrice.TextChanged += new System.EventHandler(this.textBoxRegPayPrice_TextChanged);
             this.textBoxRegPayPrice.Leave += new System.EventHandler(this.textBoxRegPayPrice_Leave);
@@ -292,7 +292,7 @@
             this.groupBoxDescribe.Location = new System.Drawing.Point(12, 27);
             this.groupBoxDescribe.Name = "groupBoxDescribe";
             this.groupBoxDescribe.Size = new System.Drawing.Size(531, 149);
-            this.groupBoxDescribe.TabIndex = 12;
+            this.groupBoxDescribe.TabIndex = 1;
             this.groupBoxDescribe.TabStop = false;
             this.groupBoxDescribe.Text = "Описание целевой недвижимости";
             // 
@@ -332,7 +332,7 @@
             this.groupBoxBuildingParams.Location = new System.Drawing.Point(12, 289);
             this.groupBoxBuildingParams.Name = "groupBoxBuildingParams";
             this.groupBoxBuildingParams.Size = new System.Drawing.Size(258, 138);
-            this.groupBoxBuildingParams.TabIndex = 13;
+            this.groupBoxBuildingParams.TabIndex = 8;
             this.groupBoxBuildingParams.TabStop = false;
             this.groupBoxBuildingParams.Text = "Параметры целевой недвижимости";
             // 
@@ -406,7 +406,7 @@
             this.groupBoxPlanParams.Location = new System.Drawing.Point(12, 182);
             this.groupBoxPlanParams.Name = "groupBoxPlanParams";
             this.groupBoxPlanParams.Size = new System.Drawing.Size(531, 101);
-            this.groupBoxPlanParams.TabIndex = 14;
+            this.groupBoxPlanParams.TabIndex = 3;
             this.groupBoxPlanParams.TabStop = false;
             this.groupBoxPlanParams.Text = "Параметры индивидуального плана";
             // 
@@ -445,7 +445,7 @@
             this.textBoxFirstPayment.Location = new System.Drawing.Point(377, 28);
             this.textBoxFirstPayment.Name = "textBoxFirstPayment";
             this.textBoxFirstPayment.Size = new System.Drawing.Size(60, 20);
-            this.textBoxFirstPayment.TabIndex = 8;
+            this.textBoxFirstPayment.TabIndex = 2;
             this.textBoxFirstPayment.Text = "10000";
             this.textBoxFirstPayment.TextChanged += new System.EventHandler(this.textBoxFirstPayment_TextChanged);
             // 
@@ -487,7 +487,7 @@
             this.textBoxMonthlyPaymentRegPays.Location = new System.Drawing.Point(375, 7);
             this.textBoxMonthlyPaymentRegPays.Name = "textBoxMonthlyPaymentRegPays";
             this.textBoxMonthlyPaymentRegPays.Size = new System.Drawing.Size(60, 20);
-            this.textBoxMonthlyPaymentRegPays.TabIndex = 10;
+            this.textBoxMonthlyPaymentRegPays.TabIndex = 4;
             this.textBoxMonthlyPaymentRegPays.Text = "0,8";
             this.textBoxMonthlyPaymentRegPays.Click += new System.EventHandler(this.textBoxMonthlyPaymentRegPays_Click);
             this.textBoxMonthlyPaymentRegPays.TextChanged += new System.EventHandler(this.textBoxMonthlyPaymentRegPays_TextChanged);
@@ -507,7 +507,7 @@
             this.textBoxMonthlyPaymentRubles.Location = new System.Drawing.Point(114, 7);
             this.textBoxMonthlyPaymentRubles.Name = "textBoxMonthlyPaymentRubles";
             this.textBoxMonthlyPaymentRubles.Size = new System.Drawing.Size(60, 20);
-            this.textBoxMonthlyPaymentRubles.TabIndex = 9;
+            this.textBoxMonthlyPaymentRubles.TabIndex = 3;
             this.textBoxMonthlyPaymentRubles.Text = "1";
             this.textBoxMonthlyPaymentRubles.Click += new System.EventHandler(this.textBoxMonthlyPaymentRubles_Click);
             // 
@@ -557,7 +557,7 @@
             this.checkBoxDiffPayment.Location = new System.Drawing.Point(874, 212);
             this.checkBoxDiffPayment.Name = "checkBoxDiffPayment";
             this.checkBoxDiffPayment.Size = new System.Drawing.Size(186, 17);
-            this.checkBoxDiffPayment.TabIndex = 12;
+            this.checkBoxDiffPayment.TabIndex = 7;
             this.checkBoxDiffPayment.Text = "Другой взнос после заселения";
             this.checkBoxDiffPayment.UseVisualStyleBackColor = true;
             this.checkBoxDiffPayment.CheckedChanged += new System.EventHandler(this.checkBoxDiffPayment_CheckedChanged);
@@ -568,7 +568,7 @@
             this.buttonCalcBigPlan.Location = new System.Drawing.Point(349, 390);
             this.buttonCalcBigPlan.Name = "buttonCalcBigPlan";
             this.buttonCalcBigPlan.Size = new System.Drawing.Size(142, 37);
-            this.buttonCalcBigPlan.TabIndex = 17;
+            this.buttonCalcBigPlan.TabIndex = 9;
             this.buttonCalcBigPlan.Text = "Рассчитать план";
             this.buttonCalcBigPlan.UseVisualStyleBackColor = false;
             this.buttonCalcBigPlan.Click += new System.EventHandler(this.buttonCalcBigPlan_Click);
@@ -586,7 +586,7 @@
             this.textBoxSettlementRating.Location = new System.Drawing.Point(706, 210);
             this.textBoxSettlementRating.Name = "textBoxSettlementRating";
             this.textBoxSettlementRating.Size = new System.Drawing.Size(60, 20);
-            this.textBoxSettlementRating.TabIndex = 11;
+            this.textBoxSettlementRating.TabIndex = 4;
             this.textBoxSettlementRating.Text = "1";
             this.textBoxSettlementRating.TextChanged += new System.EventHandler(this.textBoxSettlementRating_TextChanged);
             // 
@@ -664,7 +664,7 @@
             this.textBoxContractNum.Location = new System.Drawing.Point(706, 49);
             this.textBoxContractNum.Name = "textBoxContractNum";
             this.textBoxContractNum.Size = new System.Drawing.Size(60, 20);
-            this.textBoxContractNum.TabIndex = 6;
+            this.textBoxContractNum.TabIndex = 2;
             // 
             // numericUpDownMinRating
             // 
@@ -687,7 +687,7 @@
             131072});
             this.numericUpDownMinRating.Name = "numericUpDownMinRating";
             this.numericUpDownMinRating.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDownMinRating.TabIndex = 13;
+            this.numericUpDownMinRating.TabIndex = 5;
             this.numericUpDownMinRating.Value = new decimal(new int[] {
             5,
             0,
@@ -715,7 +715,7 @@
             65536});
             this.numericUpDownMaxRating.Name = "numericUpDownMaxRating";
             this.numericUpDownMaxRating.Size = new System.Drawing.Size(60, 20);
-            this.numericUpDownMaxRating.TabIndex = 14;
+            this.numericUpDownMaxRating.TabIndex = 6;
             this.numericUpDownMaxRating.Value = new decimal(new int[] {
             1,
             0,
@@ -800,6 +800,7 @@
             this.Text = "Расчёт плана";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormPreData_FormClosed);
+            this.Load += new System.EventHandler(this.FormPreData_Load);
             this.groupBoxDescribe.ResumeLayout(false);
             this.groupBoxDescribe.PerformLayout();
             this.groupBoxBuildingParams.ResumeLayout(false);

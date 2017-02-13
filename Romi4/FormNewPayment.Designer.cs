@@ -82,7 +82,7 @@
             this.textBoxRubles.Location = new System.Drawing.Point(106, 53);
             this.textBoxRubles.Name = "textBoxRubles";
             this.textBoxRubles.Size = new System.Drawing.Size(64, 20);
-            this.textBoxRubles.TabIndex = 3;
+            this.textBoxRubles.TabIndex = 0;
             this.textBoxRubles.TextChanged += new System.EventHandler(this.textBoxRubles_TextChanged);
             // 
             // textBoxRegPays
@@ -91,7 +91,7 @@
             this.textBoxRegPays.Location = new System.Drawing.Point(106, 79);
             this.textBoxRegPays.Name = "textBoxRegPays";
             this.textBoxRegPays.Size = new System.Drawing.Size(64, 20);
-            this.textBoxRegPays.TabIndex = 4;
+            this.textBoxRegPays.TabIndex = 1;
             this.textBoxRegPays.TextChanged += new System.EventHandler(this.textBoxRegPays_TextChanged);
             // 
             // buttonReject
@@ -101,7 +101,7 @@
             this.buttonReject.Location = new System.Drawing.Point(15, 128);
             this.buttonReject.Name = "buttonReject";
             this.buttonReject.Size = new System.Drawing.Size(75, 23);
-            this.buttonReject.TabIndex = 5;
+            this.buttonReject.TabIndex = 3;
             this.buttonReject.Text = "Отменить";
             this.buttonReject.UseVisualStyleBackColor = false;
             this.buttonReject.Click += new System.EventHandler(this.buttonReject_Click);
@@ -112,7 +112,7 @@
             this.buttonAccept.Location = new System.Drawing.Point(106, 128);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(75, 23);
-            this.buttonAccept.TabIndex = 6;
+            this.buttonAccept.TabIndex = 4;
             this.buttonAccept.Text = "Принять";
             this.buttonAccept.UseVisualStyleBackColor = false;
             this.buttonAccept.Click += new System.EventHandler(this.buttonAccept_Click);
@@ -123,7 +123,7 @@
             this.checkBoxMore.Location = new System.Drawing.Point(15, 105);
             this.checkBoxMore.Name = "checkBoxMore";
             this.checkBoxMore.Size = new System.Drawing.Size(115, 17);
-            this.checkBoxMore.TabIndex = 7;
+            this.checkBoxMore.TabIndex = 2;
             this.checkBoxMore.Text = "Добавить период";
             this.checkBoxMore.UseVisualStyleBackColor = true;
             this.checkBoxMore.Visible = false;
@@ -177,6 +177,7 @@
             this.textBoxPayment.Name = "textBoxPayment";
             this.textBoxPayment.Size = new System.Drawing.Size(74, 20);
             this.textBoxPayment.TabIndex = 12;
+            this.textBoxPayment.TabStop = false;
             // 
             // textBoxPeriod
             // 
@@ -184,6 +185,7 @@
             this.textBoxPeriod.Name = "textBoxPeriod";
             this.textBoxPeriod.Size = new System.Drawing.Size(74, 20);
             this.textBoxPeriod.TabIndex = 13;
+            this.textBoxPeriod.TabStop = false;
             // 
             // FormNewPayment
             // 
@@ -216,6 +218,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение платежа";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormNewPayment_FormClosed);
+            this.Load += new System.EventHandler(this.FormNewPayment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -37,6 +37,11 @@ namespace Romi4
 
         //Обработчики формы
 
+        private void FormPreData_Load(object sender, EventArgs e)
+        {
+            textBoxName.Focus();
+        }
+
         private void FormPreData_FormClosed(object sender, FormClosedEventArgs e)
         {
             /*System.Windows.Forms.Application.OpenForms["FormAuth"].Show();
@@ -80,10 +85,8 @@ namespace Romi4
             regPayPrice = fs.ReadLine();
             try
             {
-                ParseStringToDouble(regPayPrice);
-
                 textBoxRegPayPrice.TextChanged -= textBoxRegPayPrice_TextChanged;
-                textBoxRegPayPrice.Text = regPayPrice;
+                textBoxRegPayPrice.Text = ParseStringToDouble(regPayPrice).ToString("0.00");
                 textBoxRegPayPrice.TextChanged += textBoxRegPayPrice_TextChanged;
             }
             catch
