@@ -14,41 +14,65 @@ namespace Romi4
     {
         //Переменные временных показателей накопления. Присваиваются в CalcBigPlan() и используются
         //при выводе на печать
-        string fullTime;            //Полное время выкупа
-        string accumTime;           //Время накопления по осмотрительному плану
-        string buyoutTime;          //Время выкупа по осмотрительному плану
-        string incomeTimeMin;       //Минимальное время заселения по реалистичному плану
-        string incomeTimeMax;       //Максимальное время заселения по реалистичному плану
+        string fullTime;                //Полное время выкупа
+        string accumTime;               //Время накопления по осмотрительному плану
+        string buyoutTime;              //Время выкупа по осмотрительному плану
+        string incomeTimeMin;           //Минимальное время заселения по реалистичному плану
+        string incomeTimeMax;           //Максимальное время заселения по реалистичному плану
 
-        string settlementPayment;   //Вступительный взнос при заселении
-        double diffPayment;         //Значение платежа после заселения
+        string settlementPayment;       //Вступительный взнос при заселении
+        double diffPayment;             //Значение платежа после заселения
+        double diffPaymentPeriod;         //Значение платежа в заданный период после заселения
+        int period;                     //Период после заселения с изменённым платежом
 
         public FormPreData()
         {
             InitializeComponent();
-            SetRegPayPriceFromFile();
+
+            //Вызов функций первоначального расчёта
+            ReadRegPayPriceFromFile();
             CalcSmallPlan();
-            //CalcBigPlan();
+            CalcMonthlyPayments();
         }
 
         //Обработчики формы
 
         private void FormPreData_FormClosed(object sender, FormClosedEventArgs e)
         {
-            System.Windows.Forms.Application.OpenForms["FormAuth"].Show();
-            System.Windows.Forms.Application.OpenForms["FormAuth"].Activate();
+            /*System.Windows.Forms.Application.OpenForms["FormAuth"].Show();
+            System.Windows.Forms.Application.OpenForms["FormAuth"].Activate();*/
+            Application.Exit();
         }
 
         //Функции
-        public void SetDiffPayment(double diffValue)
+        /// <summary>
+        /// Присваивает полю diffPayment значение diffValue
+        /// </summary>
+        /// <param name="diffPayment">Значение платежа после заселения</param>
+        /// <param name="diffPaymentPeriod">Значение платежа в заданный период</param>
+        /// <param name="period">Период изменённого платежа</param>
+        public void SetDiffPayment(double diffPayment, double diffPaymentPeriod, int period)
         {
-            diffPayment = diffValue;
+            this.diffPayment = diffPayment;
+            this.diffPaymentPeriod = diffPaymentPeriod;
+            this.period = period;
+        }
+
+        /// <summary>
+        /// Вызывает форму изменения платежа
+        /// </summary>
+        /// <param name="type">Тип события: True - изменение ежемесячного платежа, False - изменение платежа после заселения</param>
+        private void CallFormNewPayment(bool type)
+        {
+            Form formNewPayment = new FormNewPayment(textBoxRegPayPrice.Text, type);
+            formNewPayment.Owner = this;
+            formNewPayment.ShowDialog();
         }
 
         /// <summary>
         /// Считывает из текстового файла значение стоимости учётного пая и добавляет его на форму
         /// </summary>
-        private void SetRegPayPriceFromFile()
+        private void ReadRegPayPriceFromFile()
         {
             string regPayPrice;
 
@@ -57,7 +81,10 @@ namespace Romi4
             try
             {
                 ParseStringToDouble(regPayPrice);
+
+                textBoxRegPayPrice.TextChanged -= textBoxRegPayPrice_TextChanged;
                 textBoxRegPayPrice.Text = regPayPrice;
+                textBoxRegPayPrice.TextChanged += textBoxRegPayPrice_TextChanged;
             }
             catch
             {
@@ -81,6 +108,22 @@ namespace Romi4
                 double.TryParse(str.Replace(",", "."), out value)
                 ? value
                 : double.Parse(str.Replace(".", ","));
+        }
+
+        /// <summary>
+        /// Переводит ежемесячные платежи из уч.п. в рубли и кв.м. 
+        /// </summary>
+        private void CalcMonthlyPayments()
+        {
+            double var_MonthlyPaymentRegPays = ParseStringToDouble(textBoxMonthlyPaymentRegPays.Text);
+            double regPayPrice = ParseStringToDouble(textBoxRegPayPrice.Text);
+            double sqMPrice = ParseStringToDouble(textBoxSqMPrice.Text);
+
+            textBoxMonthlyPaymentRubles.Text = (var_MonthlyPaymentRegPays * regPayPrice).ToString("0.00");
+            textBoxMonthlyPaymentSqM.Text = ((var_MonthlyPaymentRegPays * regPayPrice) / sqMPrice).ToString("0.0000");
+
+            textBoxMonthlyPaymentRegPays.BackColor = Color.White;
+            CalcSmallPlan();
         }
 
         /// <summary>
@@ -270,10 +313,13 @@ namespace Romi4
                 accumTime = (num - 1).ToString();
 
                 //Первая строка после заселения
+                int periodCount = 0;    //Счётчик периода с изменённым платежом после заселения
+
                 settlPaymentNum = arrRest.Last() * 0.05;
                 settlementPayment = (settlPaymentNum * sqMPrice).ToString("0.00");
 
                 num++;
+                periodCount++;
                 if (!checkBoxDiffPayment.Checked)
                 {
                     monthlySummarySqM = monthlyPaymentSqM;
@@ -281,8 +327,16 @@ namespace Romi4
                 }
                 else
                 {
-                    monthlySummaryRegPays = diffPayment;
-                    monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                    if (diffPaymentPeriod != 0.0)
+                    {
+                        monthlySummaryRegPays = diffPaymentPeriod;
+                        monthlySummarySqM = diffPaymentPeriod * regPayPrice / sqMPrice;
+                    }
+                    else
+                    {
+                        monthlySummaryRegPays = diffPayment;
+                        monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                    }
                 }
                 restSquare = (arrRest.Last() - arrIndRent.Last() - monthlySummarySqM) / 0.995;
                 arrRest.Add(restSquare);
@@ -302,6 +356,7 @@ namespace Romi4
                 while (restSquare > monthlySummarySqM)
                 {
                     num++;
+                    periodCount++;
                     if (!checkBoxDiffPayment.Checked)
                     {
                         monthlySummarySqM = monthlyPaymentSqM;
@@ -309,8 +364,16 @@ namespace Romi4
                     }
                     else
                     {
-                        monthlySummaryRegPays = diffPayment;
-                        monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                        if ((diffPaymentPeriod != 0.0) && (periodCount <= period))
+                        {
+                            monthlySummaryRegPays = diffPaymentPeriod;
+                            monthlySummarySqM = diffPaymentPeriod * regPayPrice / sqMPrice;
+                        }
+                        else
+                        {
+                            monthlySummaryRegPays = diffPayment;
+                            monthlySummarySqM = diffPayment * regPayPrice / sqMPrice;
+                        }
                     }
                     restSquare = (arrRest.Last() - monthlySummarySqM) / 0.995;
                     arrRest.Add(restSquare);
@@ -531,18 +594,7 @@ namespace Romi4
 
         private void textBoxMonthlyPaymentRegPays_TextChanged(object sender, EventArgs e)
         {
-            string monthlyPaymentRegPays_str = textBoxMonthlyPaymentRegPays.Text;
-            try
-            {
-                ParseStringToDouble(monthlyPaymentRegPays_str);
-                textBoxMonthlyPaymentRegPays.BackColor = Color.White;
-                CalcSmallPlan();
-            }
-            catch
-            {
-                textBoxMonthlyPaymentRegPays.BackColor = Color.Orange;
-                if (monthlyPaymentRegPays_str == "") textBoxMonthlyPaymentRegPays.BackColor = Color.White;
-            }
+            CalcMonthlyPayments();
         }
 
         private void textBoxFirstPayment_TextChanged(object sender, EventArgs e)
@@ -566,25 +618,6 @@ namespace Romi4
             CalcBigPlan();
         }
         
-        private void textBoxMonthlyPaymentRubles_TextChanged(object sender, EventArgs e)
-        {
-            string strMonthlyPaymentRubles = textBoxMonthlyPaymentRubles.Text;
-
-            try
-            {
-                double monthlyPaymentRubles_dbl = ParseStringToDouble(strMonthlyPaymentRubles);
-                double regPayPrice_dbl = ParseStringToDouble(textBoxRegPayPrice.Text);
-
-                textBoxFirstPayment.BackColor = Color.White;
-                textBoxMonthlyPaymentRegPays.Text = Convert.ToString(monthlyPaymentRubles_dbl / regPayPrice_dbl);
-            }
-            catch
-            {
-                textBoxFirstPayment.BackColor = Color.Orange;
-                if (strMonthlyPaymentRubles == "") textBoxFirstPayment.BackColor = Color.White;
-            }
-        }
-
         private void textBoxSettlementRating_TextChanged(object sender, EventArgs e)
         {
             string settlementRating_str = textBoxSettlementRating.Text;
@@ -688,14 +721,27 @@ namespace Romi4
         {
             if (checkBoxDiffPayment.Checked)
             {
-                Form formNewPayment = new FormNewPayment(textBoxRegPayPrice.Text);
-                formNewPayment.Owner = this;
-                formNewPayment.ShowDialog();
+                CallFormNewPayment(false);
 
-                labelDiffPaymentValue.Text = "Новый взнос: " + diffPayment.ToString("0.0000") + " уч.п.";
-                labelDiffPaymentValue.Visible = true;
+                if (checkBoxDiffPayment.Checked)
+                {
+                    labelDiffPaymentValue.Text = "Новый взнос: " + diffPayment.ToString("0.0000") + " уч.п.";
+                    if (diffPaymentPeriod != 0.0) labelDiffPaymentValue.Text += "\nТакже взнос " +
+                            diffPaymentPeriod.ToString("0.0000") + " уч.п. в течение " + period + " мес.";
+                    labelDiffPaymentValue.Visible = true;
+                }
             }
             else labelDiffPaymentValue.Visible = false;
+        }
+
+        private void textBoxMonthlyPaymentRegPays_Click(object sender, EventArgs e)
+        {
+            CallFormNewPayment(true);
+        }
+
+        private void textBoxMonthlyPaymentRubles_Click(object sender, EventArgs e)
+        {
+            CallFormNewPayment(true);
         }
     }
 }
