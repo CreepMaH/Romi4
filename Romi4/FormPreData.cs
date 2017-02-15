@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
+using System.Reflection;
 
 namespace Romi4
 {
@@ -189,6 +190,7 @@ namespace Romi4
 
                 //Привязка источника данных таблицы
                 bindingSourceSmallPlan.DataSource = smallTable;
+                dataGridViewSmallPlanParams.DoubleBuffered(true);       //Двойная буферизация для плавного скроллинга
                 dataGridViewSmallPlanParams.DataSource = bindingSourceSmallPlan;
                 //dataGridViewSmallPlanParams.Height -= 5;
             }
@@ -463,6 +465,7 @@ namespace Romi4
 
                 //Привязка источника данных таблицы
                 bindingSourceBigPlan.DataSource = bigTable;
+                dataGridViewBigPlan.DoubleBuffered(true);       //Двойная буферизация для плавного скроллинга
                 dataGridViewBigPlan.DataSource = bindingSourceBigPlan;
 
                 dataGridViewBigPlan.Height = dataGridViewBigPlan.Rows.GetRowsHeight(DataGridViewElementStates.Visible) + 70;
@@ -743,6 +746,11 @@ namespace Romi4
         private void textBoxMonthlyPaymentRubles_Click(object sender, EventArgs e)
         {
             CallFormNewPayment(true);
+        }
+
+        private void выходToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
