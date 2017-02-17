@@ -135,7 +135,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClassDoubleBuffering.cs" />
+    <Compile Include="Classes\DoubleBuffering.cs" />
+    <Compile Include="Classes\InputData.cs" />
     <Compile Include="FormAuth.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,4 +279,10 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="AfterBuild">
+    <ItemGroup>
+      <MoveToLibFolder Include="$(OutputPath)*.dll ; $(OutputPath)*.pdb ; $(OutputPath)*.xml" />
+    </ItemGroup>
+    <Move SourceFiles="@(MoveToLibFolder)" DestinationFolder="$(OutputPath)lib" OverwriteReadOnlyFiles="true" />
+  </Target>
 </Project>

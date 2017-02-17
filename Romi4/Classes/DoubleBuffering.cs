@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Romi4
 {
-    public static class ClassDoubleBuffering
+    public static class DoubleBuffering
     {
         public static void DoubleBuffered(this DataGridView dgv, bool setting)
         {

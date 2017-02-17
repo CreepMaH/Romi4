@@ -5,7 +5,6 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
-using System.Reflection;
 
 namespace Romi4
 {
@@ -24,6 +23,7 @@ namespace Romi4
         double diffPaymentPeriod;         //Значение платежа в заданный период после заселения
         int period;                     //Период после заселения с изменённым платежом
 
+        //Конструктор формы
         public FormPreData()
         {
             InitializeComponent();
@@ -35,7 +35,6 @@ namespace Romi4
         }
 
         //Обработчики формы
-
         private void FormPreData_Load(object sender, EventArgs e)
         {
             textBoxName.Focus();
@@ -149,7 +148,6 @@ namespace Romi4
                 textBoxSqMPrice.Text = Convert.ToString(Math.Round(sqMPrice, 2));
                 textBoxIncomePayment.Text = Convert.ToString(Math.Round(fundsNeed * 0.005, 2));
                 textBoxMonthlyPaymentSqM.Text = Convert.ToString(Math.Round(monthlyPaymentRegPays * regPayPrice / sqMPrice, 4));
-                //textBoxMonthlyPaymentRubles.Text = Convert.ToString(Math.Round(monthlyPaymentRegPays * regPayPrice, 2));
                 
                 //Создание таблицы параметров плана
                 DataTable smallTable = new DataTable();
@@ -221,7 +219,6 @@ namespace Romi4
 
                 //Создание таблицы плана накопления
                 DataTable bigTable = new DataTable();
-                //bigTable.Rows.Clear();
                 DataRow dr = bigTable.NewRow();
                 bigTable.Columns.Add(new DataColumn("№", typeof(string)));
                 bigTable.Columns.Add(new DataColumn("Дата платежа", typeof(string)));
